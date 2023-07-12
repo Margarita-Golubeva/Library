@@ -94,7 +94,7 @@ h1 {
 .welcome {
   box-sizing: border-box;
   height: 600px;
-  background: url(margarita-golubeva-JSFEPRESCHOOL2023Q2\library\Welcome.jpg) no-repeat center;
+  background: url(Welcome.jpg) no-repeat center;
   background-size: cover;
   position: relative;
 }
