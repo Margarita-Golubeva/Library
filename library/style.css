@@ -156,6 +156,8 @@ h1 {
 
 .main-info {
   box-sizing: border-box;
+  width: 1440px;
+  margin: auto;
   background-color: #FFF;
   margin-top: 0;
 }
