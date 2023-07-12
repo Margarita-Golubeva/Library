@@ -162,7 +162,54 @@ h1 {
 
 /* About style start */
 
+.about-library {
+  text-align: center;
+  margin-top: 60px;
+}
 
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+.buttons-container {
+  display: flex;
+  justify-content: space-around;
+  width: 78px;
+  height: 26px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-buttons-bg {
+  position: relative;
+  height: 26px;
+  width: 26px;
+  background-color: #ffffff00;
+}
+
+.page-buttons {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 16px;
+  width: 16px;
+  background-color: #0C0C0E;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.page-buttons-bg:hover {
+  cursor: pointer;
+  .page-buttons {
+    background-color: #BB945F;
+  }
+}
 
 
 /* About style end */
