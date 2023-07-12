@@ -18,6 +18,34 @@ body {
   background-color: #000;
 }
 
+h2 {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: "Forum", cursive;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  padding-top: 20px;
+  margin: 0;
+}
+
+h2::after {
+  display: flex;
+  flex-shrink: 0;
+  content: " ";
+  background: #0C0C0E;
+  width: 50px;
+  height: 1px;
+  position: absolute;
+  bottom: -20px;
+}
+
 /* Header style start */
 
 .header-title {
@@ -52,6 +80,7 @@ h1 {
   list-style-type: none;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding-left: 0;
 }
 
 .header-item {
@@ -125,6 +154,11 @@ h1 {
 
 /* Welcome style end */
 
+.main-info {
+  box-sizing: border-box;
+  background-color: #FFF;
+  margin-top: 0;
+}
 
 /* About style start */
 
