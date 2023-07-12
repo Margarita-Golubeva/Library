@@ -1,0 +1,149 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+  max-width: 1440px;
+  margin: auto;
+  font-family: "Inter", sans-serif;;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #000;
+  background-color: #000;
+}
+
+/* Header style start */
+
+.header-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
+  margin-left: 20px;
+  flex-grow: 1;
+}
+
+h1 {
+  color: #FFF;
+  font-family: "Forum", cursive;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.6px;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.header-item {
+  margin-right: 30px;
+}
+
+.header-item:last-child {
+  margin-right: 0;
+}
+
+.header-login {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 20px;;
+}
+
+.header-link {
+  color: #FFF;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header-link:hover, .header-link:focus, .header-link:active {
+  opacity: .75;
+  text-decoration: underline;
+}
+
+/* Header style end */
+
+
+/* Welcome style start */
+
+.welcome {
+  box-sizing: border-box;
+  height: 600px;
+  background: url(D:\Welcome.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+
+.welcome-plate {
+  position: absolute;
+  display: flex;
+  top: 220px;
+  width: 600px;
+  height: 220px;
+  padding: 35px 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: #0C0C0E;
+}
+
+.welcome-plate-text {
+  color: #FFF;
+  text-align: center;
+  font-family: "Forum", cursive;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* Welcome style end */
+
+
+/* About style start */
+
+
+
+
+/* About style end */
+
+/* Favorites style start */
+/* Favorites style end */
+
+/* Coffee shop style start */
+/* Coffee shop style end */
+
+/* Our contacts style start */
+/* Our contacts style end */
+
+/* Digital library cards style start */
+/* Digital library cards style end */
+
+/* Footer style start */
+/* Footer style end */
