@@ -217,6 +217,37 @@ h1 {
 /* About style end */
 
 /* Favorites style start */
+
+.favorites-choice {
+  color: #000;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 20px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.radio-choice {
+  display: flex;
+  margin-left: 20px;
+  margin-right: auto;
+  width: 700px;
+  justify-content: flex-start;
+}
+
+.radio-button {
+  margin-left: 20px;
+  margin-right: 90px;
+}
+
+.radio-button:last-child {
+  margin-right: auto;
+}
+
 /* Favorites style end */
 
 /* Coffee shop style start */
