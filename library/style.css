@@ -239,6 +239,8 @@ h1 {
   justify-content: flex-start;
 }
 
+/* TODO interactive background for buttons and bold */
+
 .radio-button {
   margin-left: 20px;
   margin-right: 90px;
@@ -247,6 +249,115 @@ h1 {
 .radio-button:last-child {
   margin-right: auto;
 }
+
+.book-list {
+  display: flex;
+  width: 1400px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.book {
+  position: relative;
+  width: 550px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  padding-top: 15px;
+  padding-left: 20px;
+  margin-bottom: 40px;
+  margin-right: 40px;
+}
+
+.staff-picks {
+  position: relative;
+  font-family: "Forum", cursive;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  padding: 0;
+  margin-top: 0;
+}
+
+.staff-picks::after {
+  display: flex;
+  flex-shrink: 0;
+  content: " ";
+  background: #BB945F;
+  width: 60px;
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+}
+
+.book-name {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.book-author {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.book-description {
+  width: 355px;
+  margin-bottom: 60px;
+  margin-right: 15px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.buy-button, .own-button {
+  box-sizing: border-box;
+  padding: 9px 27px;
+  width: 75px;
+  height: 30px;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+  color: #0C0C0E;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  cursor: pointer;
+}
+
+/* TODO button animation */
+
+.own-button {
+  padding: 9px 25px;
+  border: 1px solid #BB945F;
+  color: #BB945F;
+  cursor: auto;
+}
+
+
+.book-cover {
+  position: absolute;
+  bottom: 0;
+  right: -40px;
+  bottom: -1px
+}
+
+
 
 /* Favorites style end */
 
