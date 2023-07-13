@@ -340,6 +340,12 @@ h1 {
   cursor: pointer;
 }
 
+.buy-button:hover {
+  background-color: #BB945F;
+  border: none;
+  transition-duration: 2s;
+}
+
 /* TODO button animation */
 
 .own-button {
