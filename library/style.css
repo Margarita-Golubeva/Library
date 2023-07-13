@@ -237,18 +237,44 @@ h1 {
   margin-right: auto;
   width: 700px;
   justify-content: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: normal;
 }
 
-/* TODO interactive background for buttons and bold */
+.radio-style:hover, label:hover {
+  cursor: pointer;
+}
 
 .radio-button {
-  margin-left: 20px;
-  margin-right: 90px;
+  position: relative;
+  margin-right: 127px;
+}
+
+.radio-style {
+  position: absolute;
+  top: 5px;
+  left: -35px;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #000;
+}
+
+.radio-button:first-child {
+  margin-left: 37px;
 }
 
 .radio-button:last-child {
   margin-right: auto;
 }
+
+input[type="radio"]:checked + label {
+  font-weight: 700;
+}
+
+/* TODO: change color and border of radio style */
 
 .book-list {
   display: flex;
@@ -346,15 +372,12 @@ h1 {
   transition-duration: 2s;
 }
 
-/* TODO button animation */
-
 .own-button {
   padding: 9px 25px;
   border: 1px solid #BB945F;
   color: #BB945F;
   cursor: auto;
 }
-
 
 .book-cover {
   position: absolute;
