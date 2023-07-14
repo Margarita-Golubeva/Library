@@ -410,6 +410,86 @@ input[type="radio"]:checked {
 /* Coffee shop style end */
 
 /* Our contacts style start */
+
+.contacts {
+  padding-left: 20px;
+}
+
+.our-contacts {
+  margin-bottom: 60px;
+}
+
+.contact-heading {
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
+
+.phone-numbers {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+li:last-child {
+  margin-bottom: 40px;
+}
+
+#senior-staff {
+  margin-bottom: 20px;
+}
+
+.phone-link {
+  color: #000;
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.phone-link:hover, .phone-link:focus, .phone-link:active {
+  opacity: .75;
+  text-decoration: underline;
+}
+.amanda-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.amanda-link:hover, .amanda-link:focus, .amanda-link:active {
+  opacity: .75;
+  text-decoration: underline;
+}
+
+.contacts-area {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.google-map {
+  padding-bottom: 50%;
+  position: relative;
+  padding: 0;
+}
+
+.google-map iframe {
+  height: 414px;
+  width: 696px;
+  margin-right: 20px;
+  padding: 0;
+}
+
 /* Our contacts style end */
 
 /* Digital library cards style start */
