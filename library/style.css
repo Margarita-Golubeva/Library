@@ -417,7 +417,11 @@ input[type="radio"]:checked {
 }
 
 .our-contacts {
-  margin-bottom: 60px;
+  box-sizing: border-box;
+  width: 1440px;
+  text-align: center;
+  margin-bottom: 40px;
+  padding-right: 40px;
 }
 
 .contact-heading {
@@ -435,6 +439,9 @@ input[type="radio"]:checked {
 
 li {
   margin-bottom: 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
 }
 
 li:last-child {
@@ -457,6 +464,12 @@ li:last-child {
   opacity: .75;
   text-decoration: underline;
 }
+
+.director {
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
 .amanda-link {
   color: #000;
   text-decoration: none;
@@ -475,7 +488,7 @@ li:last-child {
   display: flex;
   justify-content: space-between;
   position: relative;
-  margin-bottom: 20px;
+  padding-bottom: 27px;
 }
 
 .google-map {
@@ -487,6 +500,7 @@ li:last-child {
 .google-map iframe {
   height: 414px;
   width: 696px;
+  margin-top: 20px;
   margin-right: 20px;
   padding: 0;
 }
@@ -503,18 +517,21 @@ li:last-child {
 
 
 .cards {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   width: 1440px;
   box-sizing: border-box;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 27px;
 }
 
 .find {
   font-size: 30px;
   letter-spacing: 0.6px;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .find-card {
@@ -523,6 +540,7 @@ li:last-child {
   padding-right: 20px;
   padding-bottom: 94px;
   width: 600px;
+  height: 386px;
   border: 3px solid #BB945F;
   background: #FFF;
   position: relative;
@@ -530,6 +548,8 @@ li:last-child {
 
 .input-lines {
   box-sizing: border-box;
+  width: 557px;
+  height: 272px;
   margin-top: 20px;
   padding-left: 20px;
   padding-top: 20px;
@@ -537,12 +557,24 @@ li:last-child {
 }
 
 .bpl-card {
-  margin: 0;
+  margin: 0px;
   padding: 0;
   font-family: "Forum", cursive;
   font-size: 30px;
   line-height: 50px; /* 166.667% */
   letter-spacing: 0.6px;
+}
+
+.card-form {
+  margin: 0;
+  padding: 0;
+}
+
+.lines {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 
 #user-name, #card-number {
@@ -560,6 +592,15 @@ li:last-child {
   letter-spacing: 0.6px;
 }
 
+#user-name {
+  margin-top: 20px;
+}
+
+#card-number {
+  position: absolute;
+  bottom: 115px;
+}
+
 .submit-button {
   box-sizing: border-box;
   padding: 10px 40px;
@@ -573,8 +614,8 @@ li:last-child {
   border-radius: 2px;
   border: 1px solid #0C0C0E;
   position: absolute;
-  bottom: 30px;
-  left: 179px;
+  bottom: 25px;
+  left: 178px;
   cursor: pointer;
 }
 
@@ -596,6 +637,7 @@ li:last-child {
 .sign-log {
   display: flex;
   justify-content: flex-end;
+  margin-top: 35px;
 }
 
 .signlog-button {
