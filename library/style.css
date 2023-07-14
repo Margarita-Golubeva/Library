@@ -643,12 +643,11 @@ li:last-child {
 .sign-log {
   display: flex;
   justify-content: flex-end;
-  margin-top: 32px;
+  margin-top: 35px;
 }
 
 .signlog-button {
   box-sizing: border-box;
-  padding-top: 10px;
   width: 75px;
   height: 30px;
   color: #0C0C0E;
