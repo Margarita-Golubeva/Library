@@ -524,14 +524,14 @@ li:last-child {
   box-sizing: border-box;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 27px;
+  padding-top: 30px;
 }
 
 .find {
   font-size: 30px;
   letter-spacing: 0.6px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
 
 .find-card {
@@ -615,7 +615,7 @@ li:last-child {
   border: 1px solid #0C0C0E;
   position: absolute;
   bottom: 25px;
-  left: 178px;
+  left: 175px;
   cursor: pointer;
 }
 
@@ -637,7 +637,7 @@ li:last-child {
 .sign-log {
   display: flex;
   justify-content: flex-end;
-  margin-top: 35px;
+  margin-top: 32px;
 }
 
 .signlog-button {
