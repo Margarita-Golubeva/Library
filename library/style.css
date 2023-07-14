@@ -71,41 +71,35 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
   background-color: #000;
 }
 
 .header-list {
   display: flex;
-  flex-wrap: nowrap;
+  justify-content: center;
   list-style-type: none;
   padding-left: 0;
   height: 50px;
-  color: #FFF;
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 50px; /* 250% */
 }
 
 .header-item {
-  margin-right: 30px;
+  margin-left: 30px;
   color: #FFF;
   font-family: "Inter", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 50px; /* 250% */
+  letter-spacing: 0.1px;
 }
 
-.header-item:last-child {
+.header-item:first-child {
   margin-right: 0;
 }
 
 .header-login {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   margin-left: 40px;
   margin-right: 20px;;
@@ -143,6 +137,7 @@ h1 {
 .welcome-plate {
   position: absolute;
   display: flex;
+  flex-wrap: nowrap;
   top: 220px;
   width: 600px;
   height: 220px;
