@@ -72,6 +72,7 @@ h1 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
+  background-color: #000;
 }
 
 .header-list {
@@ -382,7 +383,7 @@ input[type="radio"]:checked {
   cursor: pointer;
 }
 
-.buy-button:hover {
+.buy-button:hover, .signlog-button:hover, .submit-button:hover {
   background-color: #BB945F;
   border: none;
   transition-duration: 2s;
@@ -493,7 +494,132 @@ li:last-child {
 /* Our contacts style end */
 
 /* Digital library cards style start */
+
+.library-card {
+  box-sizing: border-box;
+  padding-bottom: 40px;
+  width: 1440px;
+}
+
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  width: 1440px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.find {
+  font-size: 30px;
+  letter-spacing: 0.6px;
+  text-align: center;
+}
+
+.find-card {
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 94px;
+  width: 600px;
+  border: 3px solid #BB945F;
+  background: #FFF;
+  position: relative;
+}
+
+.input-lines {
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  background: #BB945F;
+}
+
+.bpl-card {
+  margin: 0;
+  padding: 0;
+  font-family: "Forum", cursive;
+  font-size: 30px;
+  line-height: 50px; /* 166.667% */
+  letter-spacing: 0.6px;
+}
+
+#user-name, #card-number {
+  box-sizing: border-box;
+  padding-left: 20px;
+  width: 520px;
+  height: 66px;
+  border-radius: 10px;
+  border-color: #BB945F;
+  background: #FFF;
+  color: #8E8E8E;
+  font-family: "Forum", cursive;
+  font-size: 30px;
+  line-height: 50px; /* 166.667% */
+  letter-spacing: 0.6px;
+}
+
+.submit-button {
+  box-sizing: border-box;
+  padding: 10px 40px;
+  color: #0C0C0E;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background-color: #FFF;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+  position: absolute;
+  bottom: 30px;
+  left: 179px;
+  cursor: pointer;
+}
+
+.get {
+  text-align: right;
+  font-family: "Forum", cursive;
+  font-size: 30px;
+  letter-spacing: 0.6px;
+}
+
+.description {
+  text-align: right;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  line-height: 40px; /* 200% */
+  letter-spacing: 0.4px;
+}
+
+.sign-log {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.signlog-button {
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 75px;
+  color: #0C0C0E;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background-color: #FFF;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+  cursor: pointer;
+}
+
+.signlog-button:first-child {
+  margin-right: 20px;
+}
+
 /* Digital library cards style end */
 
 /* Footer style start */
 /* Footer style end */
+
