@@ -649,8 +649,8 @@ li:last-child {
 .signlog-button {
   box-sizing: border-box;
   padding-top: 10px;
-  padding-bottom: 10px;
   width: 75px;
+  height: 30px;
   color: #0C0C0E;
   text-align: center;
   font-size: 10px;
