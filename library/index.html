@@ -76,19 +76,19 @@
                         <p class="favorites-choice">Pick favorites of season</p>
                         <div class="radio-choice">
                             <div class="radio-button">
-                                <input type="radio" class="radio-style" name="season" value="winter" id="winter" />
+                                <input type="radio" class="radio-style" name="season" value="winter" id="winter">
                                 <label for="winter" class="radio-season">Winter</label>
                             </div>
                             <div class="radio-button">
-                                <input type="radio" class="radio-style" name="season" value="spring" id="spring" />
+                                <input type="radio" class="radio-style" name="season" value="spring" id="spring">
                                 <label for="spring" class="radio-season">Spring</label>
                             </div>
                             <div class="radio-button">
-                                <input type="radio" class="radio-style" name="season" value="summer" id="summer" />
+                                <input type="radio" class="radio-style" name="season" value="summer" id="summer">
                                 <label for="summer" class="radio-season">Summer</label>
                             </div>
                             <div class="radio-button">
-                                <input type="radio" class="radio-style" name="season" value="autumn" id="autumn" />
+                                <input type="radio" class="radio-style" name="season" value="autumn" id="autumn">
                                 <label for="autumn" class="radio-season">Autumn</label>
                             </div>
                         </div>
@@ -154,6 +154,31 @@
 
             <section class="library-card">
                 <h2>Digital Library Cards</h2>
+                <div class="cards">
+                    <div>
+                    <p class="find">Find your Library card</p>
+                    <div class="find-card">
+                        <div class="input-lines">
+                            <p class="bpl-card">Brooklyn Public Library</p>
+                                <form action="/" class="card-form">
+                                    <label for="user-name"></label>
+                                    <input type="text" id="user-name" name="user-name" placeholder="Reader's name" inputmode="latin-name"><br><br>
+                                    <label for="card-number"></label>
+                                    <input type="tel" id="card-number" name="card-number" placeholder="Card number" inputmode="numeric" pattern="[0-9\s]" maxlength="14"><br><br>
+                                    </div>
+                                    <input class="submit-button" type="submit" value="Check the card">
+                                </form>
+                    </div>
+                    </div>
+                    <div class="get-card">
+                        <p class="get">Get a reader card</p>
+                        <p class="description">You will be able to see a reader card after<br>logging into account or you can register a new<br>account</p>
+                        <div class="sign-log">
+                            <input class="signlog-button" type="button" value="Sign Up">
+                            <input class="signlog-button" type="button" value="Log In">
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
