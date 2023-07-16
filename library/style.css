@@ -58,7 +58,7 @@ h2::after {
 }
 
 h1 {
-  color: #FFF;
+  color: #fff;
   font-family: "Forum", cursive;
   font-size: 30px;
   font-style: normal;
@@ -85,7 +85,7 @@ h1 {
 
 .header-item {
   margin-left: 30px;
-  color: #FFF;
+  color: #fff;
   font-family: "Inter", sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -148,7 +148,7 @@ h1 {
 }
 
 .welcome-plate-text {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: "Forum", cursive;
   font-size: 40px;
@@ -165,7 +165,7 @@ h1 {
   box-sizing: border-box;
   width: 1440px;
   margin: auto;
-  background-color: #FFF;
+  background-color: #fff;
   margin-top: 0;
 }
 
@@ -690,7 +690,7 @@ li:last-child {
   width: 600px;
   height: 386px;
   border: 3px solid #BB945F;
-  background: #FFF;
+  background: #fff;
   position: relative;
 }
 
@@ -732,7 +732,7 @@ li:last-child {
   height: 66px;
   border-radius: 10px;
   border-color: #BB945F;
-  background: #FFF;
+  background: #fff;
   color: #8E8E8E;
   font-family: "Forum", cursive;
   font-size: 30px;
@@ -758,7 +758,7 @@ li:last-child {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 1px;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 2px;
   border: 1px solid #0C0C0E;
   position: absolute;
@@ -797,7 +797,7 @@ li:last-child {
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1px;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 2px;
   border: 1px solid #0C0C0E;
   cursor: pointer;
@@ -811,5 +811,180 @@ li:last-child {
 
 
 /* Footer style start */
-/* Footer style end */
 
+.footer {
+  width: 1440px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #0C0C0E;
+  height: 250px;
+}
+
+.address-time {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.address {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+  margin-top: 0;
+}
+
+.address-link {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+  margin-top: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.address-link:hover, .address-link:active, .address-link:focus {
+  opacity: .75;
+  text-decoration: underline;
+}
+
+.time {
+  color: #fff;
+  text-align: right;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.links-time {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.links-list {
+  list-style-type: none;
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline;
+}
+
+.social-link {
+  margin-right: 10px;
+  padding: 0;
+}
+
+.social-link:last-child {
+  margin: 0;
+}
+
+.footer-line {
+  content: " ";
+  background: #fff;
+  color: #fff;
+  width: 1400px;
+  height: 1px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.my-contacts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.year {
+  color: #fff;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  letter-spacing: 2px;
+  margin-right: 170px;
+  margin-bottom: auto;
+}
+
+.rs-school {
+  color: #fff;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  letter-spacing: 2px;
+  margin-top: 10px;
+  margin-bottom: auto;
+}
+
+.rsschool-link {
+  color: #fff;
+  text-align: right;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.rsschool-link:hover, .rsschool-link:active, .rsschool-link:focus {
+  opacity: .75;
+  text-decoration: underline;
+}
+
+.github {
+  color: #fff;
+  text-align: right;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: auto;
+}
+
+.github-link {
+  color: #fff;
+  text-align: right;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  padding: 0;
+  margin-top: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.github-link:hover, .github-link:active, .github-link:focus {
+  opacity: .75;
+  text-decoration: underline;
+}
+
+/* Footer style end */
