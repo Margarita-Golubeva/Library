@@ -51,7 +51,6 @@ h2::after {
 
 .header-title {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: left;
   margin-left: 20px;
@@ -70,7 +69,6 @@ h1 {
 
 .header-wrapper {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
   background-color: #000;
