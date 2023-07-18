@@ -1,5 +1,6 @@
 html {
-    box-sizing: border-box;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 *, *::before, *::after {
@@ -50,7 +51,6 @@ h2::after {
 
 .header-title {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: left;
   margin-left: 20px;
@@ -69,7 +69,6 @@ h1 {
 
 .header-wrapper {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
   background-color: #000;
@@ -241,9 +240,9 @@ h1 {
 .radio-choice {
   display: flex;
   margin-left: 20px;
-  margin-right: auto;
   width: 700px;
-  justify-content: flex-start;
+  height: 24px;
+  justify-content: space-between;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -257,23 +256,37 @@ h1 {
 
 .radio-button {
   position: relative;
-  margin-right: 127px;
+  margin-right: 194px;
+}
+
+.radio-button:hover, .radio-button:focus {
+  cursor: pointer;
 }
 
 .radio-style {
   position: absolute;
   top: 5px;
-  left: -35px;
+  left: -37px;
   width: 17px;
   height: 17px;
   border: 2px solid #000;
+}
+
+.radio-season {
+  position: absolute;
+  left: 0;
 }
 
 .radio-button:first-child {
   margin-left: 37px;
 }
 
+.radio-button:nth-child(3) {
+  margin-left: -5px;
+}
+
 .radio-button:last-child {
+  margin-left: 12px;
   margin-right: auto;
 }
 
