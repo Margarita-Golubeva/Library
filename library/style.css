@@ -319,7 +319,7 @@ input:checked ~ span {
   font-weight: 700;
 }
 
-.book-list-winter {
+.book-list-winter, .book-list-spring, .book-list-summer, .book-list-autumn {
   display: flex;
   width: 1400px;
   justify-content: space-between;
@@ -329,9 +329,14 @@ input:checked ~ span {
   margin-top: 35px;
 }
 
+.book-list-spring, .book-list-summer, .book-list-autumn  {
+  display: none;
+}
+
 .book {
   position: relative;
   width: 550px;
+  height: 555px;
   box-sizing: border-box;
   border: 1px solid #000;
   padding-top: 15px;
@@ -398,6 +403,7 @@ input:checked ~ span {
   border-radius: 2px;
   border: 1px solid #0C0C0E;
   color: #0C0C0E;
+  background-color: #fff;
   text-align: center;
   font-size: 10px;
   font-weight: 700;
