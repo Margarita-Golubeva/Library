@@ -326,7 +326,7 @@ input:checked ~ span {
   flex-wrap: wrap;
   margin-left: 20px;
   margin-right: auto;
-  margin-top: 35px;
+  margin-top: 34px;
 }
 
 .book-list-spring, .book-list-summer, .book-list-autumn  {
