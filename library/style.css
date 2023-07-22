@@ -243,7 +243,7 @@ h1 {
   font-weight: 700;
   line-height: normal;
   margin-left: 20px;
-  margin-top: 60px;
+  margin-top: 62px;
   margin-bottom: 35px;
 }
 
@@ -851,6 +851,7 @@ li:last-child {
   padding-right: 20px;
   padding-top: 1px;
   height: 250px;
+  margin-top: 2px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -889,7 +890,7 @@ li:last-child {
   text-decoration: underline;
 }
 
-.time {
+.time, .time-two {
   color: #fff;
   text-align: right;
   font-family: "Inter", sans-serif;
@@ -899,6 +900,10 @@ li:last-child {
   line-height: 20px; /* 133.333% */
   margin-top: 0;
   margin-bottom: 10px;
+}
+
+.time-two {
+  margin-top: -5px;
 }
 
 .links-time {
