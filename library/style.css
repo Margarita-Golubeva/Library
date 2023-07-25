@@ -123,6 +123,7 @@ h1 {
 .header-link:hover, .header-link:focus, .header-link:active {
   opacity: .75;
   text-decoration: underline;
+  transition-duration: 1s;
 }
 
 /* Header style end */
@@ -226,6 +227,7 @@ h1 {
   cursor: pointer;
   .page-buttons {
     background-color: #BB945F;
+    transition-duration: 1s;
   }
 }
 
@@ -637,6 +639,7 @@ li:last-child {
 .phone-link:hover, .phone-link:focus, .phone-link:active {
   opacity: .75;
   text-decoration: underline;
+  transition-duration: 1s;
 }
 
 .director {
@@ -656,6 +659,7 @@ li:last-child {
 .amanda-link:hover, .amanda-link:focus, .amanda-link:active {
   opacity: .75;
   text-decoration: underline;
+  transition-duration: 1s;
 }
 
 .contacts-area {
@@ -663,6 +667,7 @@ li:last-child {
   justify-content: space-between;
   position: relative;
   padding-bottom: 27px;
+  transition-duration: 2s;
 }
 
 .google-map {
@@ -889,6 +894,7 @@ li:last-child {
 .address-link:hover, .address-link:active, .address-link:focus {
   opacity: .75;
   text-decoration: underline;
+  transition-duration: 1s;
 }
 
 .time, .time-two {
@@ -988,6 +994,7 @@ li:last-child {
 .rsschool-link:hover, .rsschool-link:active, .rsschool-link:focus {
   opacity: .75;
   text-decoration: underline;
+  transition-duration: 1s;
 }
 
 .github {
@@ -1022,6 +1029,7 @@ li:last-child {
 .github-link:hover, .github-link:active, .github-link:focus {
   opacity: .75;
   text-decoration: underline;
+  transition-duration: 1s;
 }
 
 /* Footer style end */
