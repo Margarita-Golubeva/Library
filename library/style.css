@@ -591,10 +591,11 @@ input:checked ~ span {
 
 .our-contacts {
   box-sizing: border-box;
-  width: 1440px;
+  width: 1420px;
   text-align: center;
   margin-bottom: 40px;
   padding-right: 40px;
+  padding-left: 20px;
 }
 
 .contact-heading {
