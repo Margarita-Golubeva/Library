@@ -664,22 +664,13 @@ li:last-child {
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding-bottom: 27px;
+  padding-bottom: 28px;
   transition-duration: 2s;
 }
 
 .google-map {
-  padding-bottom: 50%;
-  position: relative;
-  padding: 0;
-}
-
-.google-map iframe {
-  height: 414px;
-  width: 696px;
-  margin-top: 20px;
-  margin-right: 20px;
-  padding: 0;
+  padding-right: 20px;
+  padding-top: 21px;
 }
 
 /* Our contacts style end */
@@ -750,6 +741,7 @@ li:last-child {
 }
 
 .lines {
+  margin-left: -2px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -772,12 +764,12 @@ li:last-child {
 }
 
 #user-name {
-  margin-top: 20px;
+  margin-top: 18px;
 }
 
 #card-number {
   position: absolute;
-  bottom: 115px;
+  bottom: 117px;
 }
 
 .submit-button {
@@ -793,8 +785,8 @@ li:last-child {
   border-radius: 2px;
   border: 1px solid #0C0C0E;
   position: absolute;
-  bottom: 25px;
-  left: 175px;
+  bottom: 27px;
+  left: 176px;
   cursor: pointer;
 }
 
@@ -850,7 +842,7 @@ li:last-child {
   padding-right: 20px;
   padding-top: 1px;
   height: 250px;
-  margin-top: 2px;
+  margin-top: 1px;
   margin-left: auto;
   margin-right: auto;
   background-color: #0C0C0E;
@@ -936,7 +928,7 @@ li:last-child {
   width: 1400px;
   height: 1px;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
 .my-contacts {
