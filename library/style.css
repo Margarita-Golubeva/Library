@@ -120,13 +120,13 @@ h1 {
   font-weight: 400;
   line-height: 50px;
   text-decoration: none;
-  cursor: pointer;
 }
 
 .header-link:hover, .header-link:focus, .header-link:active {
-  opacity: .75;
+  cursor: pointer;
+  color: #BB945F;
   text-decoration: underline;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }
 
 /* Header style end */
@@ -227,7 +227,7 @@ h1 {
   cursor: pointer;
   .page-buttons {
     background-color: #BB945F;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
   }
 }
 
@@ -633,13 +633,12 @@ li:last-child {
   text-decoration: none;
   text-transform: capitalize;
   letter-spacing: 2px;
-  cursor: pointer;
 }
 
 .phone-link:hover, .phone-link:focus, .phone-link:active {
-  opacity: .75;
-  text-decoration: underline;
-  transition-duration: 1s;
+  cursor: pointer;
+  color: #BB945F;
+  transition-duration: 0.5s;
 }
 
 .director {
@@ -653,13 +652,12 @@ li:last-child {
   font-weight: 700;
   text-transform: capitalize;
   letter-spacing: 2px;
-  cursor: pointer;
 }
 
 .amanda-link:hover, .amanda-link:focus, .amanda-link:active {
-  opacity: .75;
-  text-decoration: underline;
-  transition-duration: 1s;
+  cursor: pointer;
+  color: #BB945F;
+  transition-duration: 0.5s;
 }
 
 .contacts-area {
@@ -883,14 +881,13 @@ li:last-child {
   font-weight: 400;
   line-height: 20px; /* 133.333% */
   margin-top: 0;
-  cursor: pointer;
   text-decoration: none;
 }
 
 .address-link:hover, .address-link:active, .address-link:focus {
-  opacity: .75;
-  text-decoration: underline;
-  transition-duration: 1s;
+  cursor: pointer;
+  color: #BB945F;
+  transition-duration: 0.5s;
 }
 
 .time, .time-two {
@@ -983,14 +980,13 @@ li:last-child {
   font-weight: 400;
   line-height: 40px; /* 200% */
   letter-spacing: 2px;
-  cursor: pointer;
   text-decoration: none;
 }
 
 .rsschool-link:hover, .rsschool-link:active, .rsschool-link:focus {
-  opacity: .75;
-  text-decoration: underline;
-  transition-duration: 1s;
+  cursor: pointer;
+  color: #BB945F;
+  transition-duration: 0.5s;
 }
 
 .github {
@@ -1023,9 +1019,9 @@ li:last-child {
 }
 
 .github-link:hover, .github-link:active, .github-link:focus {
-  opacity: .75;
-  text-decoration: underline;
-  transition-duration: 1s;
+  cursor: pointer;
+  color: #BB945F;
+  transition-duration: 0.5s;
 }
 
 /* Footer style end */
