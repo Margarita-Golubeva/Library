@@ -125,7 +125,6 @@ h1 {
 .header-link:hover, .header-link:focus, .header-link:active {
   cursor: pointer;
   color: #BB945F;
-  text-decoration: underline;
   transition-duration: 0.5s;
 }
 
@@ -173,7 +172,7 @@ h1 {
 
 .main-info {
   box-sizing: border-box;
-  width: 1440px;
+  max-width: 1440px;
   margin: auto;
   background-color: #fff;
   margin-top: 0;
@@ -323,7 +322,7 @@ input:checked ~ span {
 
 .book-list-winter, .book-list-spring, .book-list-summer, .book-list-autumn {
   display: flex;
-  width: 1400px;
+  max-width: 1400px;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-left: 20px;
@@ -443,7 +442,7 @@ input:checked ~ span {
 
 .coffee-shop {
   box-sizing: border-box;
-  width: 1440px;
+  max-width: 1440px;
   padding: 0 20px;
 }
 
@@ -593,7 +592,7 @@ input:checked ~ span {
 
 .our-contacts {
   box-sizing: border-box;
-  width: 1420px;
+  max-width: 1420px;
   text-align: center;
   margin-bottom: 40px;
   padding-right: 40px;
@@ -681,26 +680,34 @@ li:last-child {
 .library-card {
   box-sizing: border-box;
   padding-bottom: 40px;
-  width: 1440px;
+  max-width: 1440px;
 }
-
 
 .cards {
   box-sizing: border-box;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 1440px;
+  max-width: 1440px;
   box-sizing: border-box;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 30px;
 }
 
+.card {
+  flex: 1;
+}
+
+.get-card {
+  flex: 1;
+}
+
 .find {
   font-size: 30px;
   letter-spacing: 0.6px;
-  text-align: center;
   margin-bottom: 27px;
+  margin-left: 140px;
 }
 
 .find-card {
@@ -798,11 +805,14 @@ li:last-child {
 }
 
 .description {
+  width: 456px;
   text-align: right;
   font-family: "Inter", sans-serif;
   font-size: 20px;
   line-height: 40px; /* 200% */
   letter-spacing: 0.4px;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .sign-log {
@@ -1015,3 +1025,33 @@ li:last-child {
 }
 
 /* Footer style end */
+
+/* media code */
+
+@media screen and (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .get {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 40px;
+  }
+
+  .description {
+    text-align: center;
+    width: 600px;
+  }
+
+  .sign-log {
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .footer {
+    margin-top: 0;
+  }
+
+}
