@@ -1,0 +1,56 @@
+/* media code */
+
+@media screen and (max-width: 768px) {
+
+
+    .welcome-bg {
+    position: relative;
+    height: 600px;
+    background: url(welcomemedia.jpeg) no-repeat center;
+    background-size: cover;
+
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  
+    .contacts-area {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 25px;
+    }
+  
+    .google-map {
+      padding-top: 80px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .get {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 35px;
+    }
+  
+    .description {
+      text-align: center;
+      width: 600px;
+    }
+  
+    .sign-log {
+      margin-top: 40px;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+  
+    .footer {
+      margin-top: 0;
+    }
+  
+  }
