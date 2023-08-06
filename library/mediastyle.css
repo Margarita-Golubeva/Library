@@ -2,6 +2,11 @@
 
 @media screen and (max-width: 768px) {
 
+/* Header style start */
+
+/* Header style end */
+
+/* Welcome style start */
 
 .welcome-bg {
     position: relative;
@@ -9,6 +14,11 @@
     background: url(welcomemedia.jpeg) no-repeat center;
     background-size: cover;
 }
+
+/* Welcome style end */
+
+
+/* About style start */
 
 .gallery {
     justify-content: center;
@@ -51,7 +61,33 @@
     flex-direction: column;
     flex-wrap: wrap;
 }
-  
+
+/* About style end */
+
+/* Favorites style start */
+
+.radio-choice {
+    flex-wrap: wrap;
+}
+
+.book-list-winter, .book-list-spring, .book-list-summer, .book-list-autumn {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+}
+
+#ownbtn {
+    display: none;
+}
+
+/* Favorites style end */
+
+/* Coffee shop style start */
+
+/* Coffee shop style end */
+
+/* Our contacts style start */
+
 .contacts-area {
     display: flex;
     flex-direction: column;
@@ -64,6 +100,10 @@
     margin-right: auto;
 }
   
+/* Our contacts style end */
+
+/* Digital library cards style start */
+
 .cards {
     flex-direction: column;
     align-items: center;
@@ -86,8 +126,13 @@
     margin-bottom: 0;
 }
   
+/* Digital library cards style end */
+
+/* Footer style start */
+
 .footer {
     margin-top: 0;
     }
+/* Footer style end */
   
 }
