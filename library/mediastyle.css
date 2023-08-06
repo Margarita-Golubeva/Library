@@ -84,6 +84,14 @@
 
 /* Coffee shop style start */
 
+.menu {
+    flex-direction: column;
+}
+
+.dessert-header {
+    margin-top: 20px;
+}
+
 /* Coffee shop style end */
 
 /* Our contacts style start */
@@ -98,6 +106,10 @@
     padding-top: 80px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.dessert-items {
+    margin-left: auto;
 }
   
 /* Our contacts style end */
