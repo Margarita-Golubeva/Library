@@ -18,6 +18,12 @@ body {
   background-color: #000;
 }
 
+.body-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
 h2 {
   display: flex;
   position: relative;
@@ -126,6 +132,55 @@ h1 {
   cursor: pointer;
   color: #BB945F;
   transition-duration: 0.5s;
+}
+
+.burger-btn {
+  display: none;
+  position: relative;
+  margin-right: 15px;
+  margin-left: 15px;
+  width: 55px;
+  height: 30px;
+  background-color: #000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.burger-btn span {
+  display: block;
+  position: absolute;
+  left: 5px;
+  width: 45px;
+  height: 2px;
+  background-color: #fff;
+  transition: background-color 0.5s, opacity 0.3s, transform 0.5s;
+  will-change: transform;
+}
+
+.burger-btn span:first-child {
+  transform: translateY(-10px);
+}
+
+.burger-btn span:last-child {
+  transform: translateY(10px);
+}
+
+/* close */
+
+.header.open .burger-btn span:first-child {
+  transform: translateY(0) rotate(-45deg);
+  left: 0;
+}
+
+.header.open .burger-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .burger-btn span:last-child {
+  transform: translateY(0) rotate(45deg);
+  left: 0;
 }
 
 /* Header style end */

@@ -1,10 +1,57 @@
 /* media code */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 
 /* Header style start */
 
+.burger-btn {
+    display: block;
+}
+
+.header-login {
+    z-index: 2;
+}
+
+.navigation {
+    position: absolute;
+    right: -332px;
+    top: 0;
+    width: 332px;
+    height: 570px;
+    text-align: center;
+    background-color: #000;
+    visibility: hidden;
+    transition: transform 0.5s, visibility 0.5s;
+    z-index: 2;
+}
+
+.header-list {
+    display: block;
+    padding-top: 80px;
+    padding-right: 25px;
+}
+
+.header-item {
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 10px;
+}
+
+.header-link {
+    display: block;
+}
+
+.header.open .navigation {
+    transform: translateX(-100%);
+    visibility: visible;
+    transition: transform 0.5s, visibility 0.5s;
+}
+
 /* Header style end */
+}
+
+
+@media screen and (max-width: 768px) {
 
 /* Welcome style start */
 
