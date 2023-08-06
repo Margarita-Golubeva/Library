@@ -1,0 +1,197 @@
+/* media code */
+
+@media screen and (max-width: 1024px) {
+
+/* Header style start */
+
+.burger-btn {
+    display: block;
+}
+
+.header-login {
+    z-index: 2;
+}
+
+.navigation {
+    position: absolute;
+    right: -332px;
+    top: 0;
+    width: 332px;
+    height: 570px;
+    text-align: center;
+    background-color: #000;
+    visibility: hidden;
+    transition: transform 0.5s, visibility 0.5s;
+    z-index: 2;
+}
+
+.header-list {
+    display: block;
+    padding-top: 80px;
+    padding-right: 25px;
+}
+
+.header-item {
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 10px;
+}
+
+.header-link {
+    display: block;
+}
+
+.header.open .navigation {
+    transform: translateX(-100%);
+    visibility: visible;
+    transition: transform 0.5s, visibility 0.5s;
+}
+
+/* Header style end */
+}
+
+
+@media screen and (max-width: 768px) {
+
+/* Welcome style start */
+
+.welcome-bg {
+    position: relative;
+    height: 600px;
+    background: url(welcomemedia.jpeg) no-repeat center;
+    background-size: cover;
+}
+
+/* Welcome style end */
+
+
+/* About style start */
+
+.gallery {
+    justify-content: center;
+    position: relative;
+}
+
+.caret-rigth, .caret-left {
+    display: inline-flex;
+}
+
+.caret-left {
+    position: absolute;
+    left: 58px;
+    top: 288px;
+}
+
+.caret-rigth {
+    position: absolute;
+    right: 58px;
+    top: 288px;
+}
+
+#pic2, #pic3, #pic4, #pic5 {
+    display: none;
+}
+
+.buttons-container {
+    width: fit-content;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+#mediabtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* About style end */
+
+/* Favorites style start */
+
+.radio-choice {
+    flex-wrap: wrap;
+}
+
+.book-list-winter, .book-list-spring, .book-list-summer, .book-list-autumn {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+}
+
+#ownbtn {
+    display: none;
+}
+
+/* Favorites style end */
+
+/* Coffee shop style start */
+
+.menu {
+    flex-direction: column;
+}
+
+.dessert-header {
+    margin-top: 20px;
+}
+
+/* Coffee shop style end */
+
+/* Our contacts style start */
+
+.contacts-area {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+  
+.google-map {
+    padding-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dessert-items {
+    margin-left: auto;
+}
+  
+/* Our contacts style end */
+
+/* Digital library cards style start */
+
+.cards {
+    flex-direction: column;
+    align-items: center;
+}
+  
+.get {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+  
+.description {
+    text-align: center;
+    width: 600px;
+}
+  
+.sign-log {
+    margin-top: 40px;
+    justify-content: center;
+    margin-bottom: 0;
+}
+  
+/* Digital library cards style end */
+
+/* Footer style start */
+
+.footer {
+    margin-top: 0;
+    }
+/* Footer style end */
+  
+}

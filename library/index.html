@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to the Brooklyn Library</title>
-    <script src="index.js"></script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediastyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+<script defer src="index.js"></script>
+
 </head>
 <body>
+    <div class="body-wrapper">
     <header class="header">
         <div class="wrapper">
             <div class="header-wrapper">
                 <div class="header-title">
                     <h1>Brooklyn Public Library</h1>
                 </div>
-            <nav>
+            <nav class="navigation" id="nav-menu">
                 <ul class="header-list">
                     <li class="header-item">
                         <a href="#about" class="header-link">About</a>
@@ -41,6 +45,9 @@
             <a href="/" class="header-login">
                  <img class="login" src="profile.svg" alt="login" style="width: 28px; height: 28px;">
             </a>
+            <button class="burger-btn" id="burger">
+                <span></span><span></span><span></span>
+            </button>
             </div>
         </div>
     </header>
@@ -55,16 +62,26 @@
         <div class="main-info">
             <section class="about">
                 <h2 id="about">About</h2>
-                <div class="about-library"><p>The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p></div>
+                <div class="about-library"><p>The Brooklyn Library is a free workspace, a large number of books and a cozy&nbsp;coffee shop inside</p></div>
                 <div class="gallery">
-                <img class="gallery-item" src="image1.png" alt="A girl looking for a book in a library">
-                <img class="gallery-item" src="image2.png" alt="A row of busts in a library">
-                <img class="gallery-item" src="image3.png" alt="Many shelves with books in a circle">
+                <div class="caret-left">
+                    <img src="caretLeft.svg" alt="caret left">
+                </div>
+                <img class="gallery-item" id="pic1" src="image1.png" alt="A girl looking for a book in a library">
+                <img class="gallery-item" id="pic2" src="image2.png" alt="A row of busts in a library">
+                <img class="gallery-item" id="pic3" src="image3.png" alt="Many shelves with books in a circle">
+                <img class="gallery-item" id="pic4" src="image4.png" alt="Book shelves and a ladder">
+                <img class="gallery-item" id="pic5" src="image5.png" alt="Library's facade">
+                <div class="caret-rigth">
+                    <img src="caretRight.svg" alt="caret right">
+                </div>
                 </div>
                 <div class="buttons-container">
                 <span class="page-buttons-bg"><span class="page-buttons"></span></span>
                 <span class="page-buttons-bg"><span class="page-buttons"></span></span>
                 <span class="page-buttons-bg"><span class="page-buttons"></span></span>
+                <span class="page-buttons-bg" id="mediabtn"><span class="page-buttons"></span></span>
+                <span class="page-buttons-bg" id="mediabtn"><span class="page-buttons"></span></span>
                 </div>
             </section>
             <section class="favorites">
@@ -104,7 +121,7 @@
                             <p class="book-name">The Book Eaters</p>
                             <p class="book-author">By Sunyi Dean</p>
                             <p class="book-description">An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
-                            <button type="button" class="buy-button">Buy</button>
+                            <button type="button" class="buy-button" id="buybtn">Buy</button>
                             <img src="book1.png" class="book-cover" alt="The Book Eaters By Sunyi Dean">
                         </div>
                         <div class="book">
@@ -112,7 +129,7 @@
                             <p class="book-name">Cackle</p>
                             <p class="book-author">By Rachel Harrison</p>
                             <p class="book-description">Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
-                            <button type="button" class="buy-button">Buy</button>
+                            <button type="button" class="buy-button" id="buybtn">Buy</button>
                             <img src="book2.png" class="book-cover" alt="Cackle By Rachel Harrison">
                         </div>
                         <div class="book">
@@ -120,7 +137,7 @@
                             <p class="book-name">Dante: Poet of the Secular World</p>
                             <p class="book-author">By Erich Auerbach</p>
                             <p class="book-description">Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as&nbsp;one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
-                            <button type="button" class="buy-button">Buy</button>
+                            <button type="button" class="buy-button" id="buybtn">Buy</button>
                             <img src="book3.png" class="book-cover" alt="Dante: Poet of the Secular World By Erich Auerbach">
                         </div>
                         <div class="book">
@@ -128,7 +145,8 @@
                             <p class="book-name">The Last Queen</p>
                             <p class="book-author">By Clive Irving</p>
                             <p class="book-description">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
-                            <button type="button" class="own-button" disabled>Own</button>
+                            <button type="button" class="buy-button" id="buybtn">Buy</button>
+                            <button type="button" class="own-button" id="ownbtn" disabled>Own</button>
                             <img src="book4.png" class="book-cover" alt="The Last Queen By Clive Irving">
                         </div>
                     </div>
@@ -362,5 +380,6 @@
         </div>
         </div>
     </footer>
+</div>
 </body>
 </html>
