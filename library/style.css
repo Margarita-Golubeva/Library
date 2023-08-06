@@ -18,6 +18,12 @@ body {
   background-color: #000;
 }
 
+.body-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
 h2 {
   display: flex;
   position: relative;
@@ -128,6 +134,55 @@ h1 {
   transition-duration: 0.5s;
 }
 
+.burger-btn {
+  display: none;
+  position: relative;
+  margin-right: 15px;
+  margin-left: 15px;
+  width: 55px;
+  height: 30px;
+  background-color: #000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.burger-btn span {
+  display: block;
+  position: absolute;
+  left: 5px;
+  width: 45px;
+  height: 2px;
+  background-color: #fff;
+  transition: background-color 0.5s, opacity 0.3s, transform 0.5s;
+  will-change: transform;
+}
+
+.burger-btn span:first-child {
+  transform: translateY(-10px);
+}
+
+.burger-btn span:last-child {
+  transform: translateY(10px);
+}
+
+/* close */
+
+.header.open .burger-btn span:first-child {
+  transform: translateY(0) rotate(-45deg);
+  left: 0;
+}
+
+.header.open .burger-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .burger-btn span:last-child {
+  transform: translateY(0) rotate(45deg);
+  left: 0;
+}
+
 /* Header style end */
 
 
@@ -192,6 +247,13 @@ h1 {
   margin-right: 20px;
 }
 
+#pic4, #pic5 {
+  display: none;
+}
+
+.caret-rigth, .caret-left {
+  display: none;
+}
 
 .buttons-container {
   display: flex;
@@ -222,6 +284,10 @@ h1 {
   display: inline-block;
 }
 
+#mediabtn {
+  display: none;
+}
+
 .page-buttons-bg:hover {
   cursor: pointer;
   .page-buttons {
@@ -229,7 +295,6 @@ h1 {
     transition-duration: 0.5s;
   }
 }
-
 
 /* About style end */
 
@@ -1025,52 +1090,3 @@ li:last-child {
 }
 
 /* Footer style end */
-
-/* media code */
-
-@media screen and (max-width: 768px) {
-  .contacts {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  .contacts-area {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 25px;
-  }
-
-  .google-map {
-    padding-top: 80px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .get {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 35px;
-  }
-
-  .description {
-    text-align: center;
-    width: 600px;
-  }
-
-  .sign-log {
-    margin-top: 40px;
-    justify-content: center;
-    margin-bottom: 0;
-  }
-
-  .footer {
-    margin-top: 0;
-  }
-
-}
