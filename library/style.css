@@ -192,6 +192,10 @@ h1 {
   margin-right: 20px;
 }
 
+#pic4, #pic5 {
+  display: none;
+}
+
 
 .buttons-container {
   display: flex;
@@ -220,6 +224,10 @@ h1 {
   background-color: #0C0C0E;
   border-radius: 50%;
   display: inline-block;
+}
+
+#mediabtn {
+  display: none;
 }
 
 .page-buttons-bg:hover {

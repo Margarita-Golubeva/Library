@@ -8,50 +8,69 @@
     height: 600px;
     background: url(welcomemedia.jpeg) no-repeat center;
     background-size: cover;
-    }
+}
 
-    .contacts {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+.gallery {
+    justify-content: center;
+}
+
+#pic2, #pic3, #pic4, #pic5 {
+    display: none;
+}
+
+.buttons-container {
+    width: fit-content;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+#mediabtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+  
+.contacts-area {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+  
+.google-map {
+    padding-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.cards {
+    flex-direction: column;
+    align-items: center;
+}
+  
+.get {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+  
+.description {
+    text-align: center;
+    width: 600px;
+}
+  
+.sign-log {
+    margin-top: 40px;
+    justify-content: center;
+    margin-bottom: 0;
+}
+  
+.footer {
+    margin-top: 0;
     }
   
-    .contacts-area {
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 25px;
-    }
-  
-    .google-map {
-      padding-top: 80px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  
-    .cards {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .get {
-      text-align: center;
-      margin-top: 20px;
-      margin-bottom: 35px;
-    }
-  
-    .description {
-      text-align: center;
-      width: 600px;
-    }
-  
-    .sign-log {
-      margin-top: 40px;
-      justify-content: center;
-      margin-bottom: 0;
-    }
-  
-    .footer {
-      margin-top: 0;
-    }
-  
-  }
+}
