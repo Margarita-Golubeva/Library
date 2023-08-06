@@ -196,6 +196,9 @@ h1 {
   display: none;
 }
 
+.caret-rigth, .caret-left {
+  display: none;
+}
 
 .buttons-container {
   display: flex;

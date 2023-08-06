@@ -12,6 +12,23 @@
 
 .gallery {
     justify-content: center;
+    position: relative;
+}
+
+.caret-rigth, .caret-left {
+    display: inline-flex;
+}
+
+.caret-left {
+    position: absolute;
+    left: 58px;
+    top: 288px;
+}
+
+.caret-rigth {
+    position: absolute;
+    right: 58px;
+    top: 288px;
 }
 
 #pic2, #pic3, #pic4, #pic5 {
