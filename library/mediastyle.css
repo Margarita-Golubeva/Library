@@ -1,5 +1,31 @@
 /* media code */
 
+@media screen and (max-width: 1400px) {
+    /* About style start */
+
+.gallery {
+    justify-content: space-around;
+    position: relative;
+}
+
+#pic3, #pic4, #pic5 {
+    display: none;
+}
+
+.buttons-container {
+    width: fit-content;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+#mediabtn2 {
+    display: none;
+}
+
+/* About style end */
+}
+
+
 @media screen and (max-width: 1200px) {
 
     /* Favorites style start */
@@ -84,6 +110,9 @@
 .gallery {
     justify-content: center;
     position: relative;
+    max-width: 614px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .caret-rigth, .caret-left {
@@ -93,13 +122,13 @@
 
 .caret-left {
     position: absolute;
-    left: 58px;
+    left: 0;
     top: 288px;
 }
 
 .caret-rigth {
     position: absolute;
-    right: 58px;
+    right: 0;
     top: 288px;
 }
 
@@ -118,10 +147,8 @@
     justify-content: space-between;
 }
 
-.contacts {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+#mediabtn2 {
+    display: block;
 }
 
 /* About style end */
@@ -143,6 +170,12 @@
 /* Coffee shop style end */
 
 /* Our contacts style start */
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
 .contacts-area {
     display: flex;
@@ -192,6 +225,10 @@
 
 .footer-line {
     width: 100%;
+}
+
+.rs-school {
+    margin-left: 0;
 }
 /* Footer style end */
   
