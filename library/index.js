@@ -15,6 +15,27 @@ document.addEventListener("DOMContentLoaded", function() {
         if (event._isClickWithInMenu) return;
         document.querySelector(".header").classList.remove("open")
     });
+
+    document.getElementById("#about").addEventListener('click', event => {
+        document.querySelector(".header").classList.remove("open")
+    })
+
+    document.getElementById("#favorites").addEventListener('click', event => {
+        document.querySelector(".header").classList.remove("open")
+    })
+
+    document.getElementById("#coffee-shop").addEventListener('click', event => {
+        document.querySelector(".header").classList.remove("open")
+    })
+
+    document.getElementById("#contacts").addEventListener('click', event => {
+        document.querySelector(".header").classList.remove("open")
+    })
+
+    document.getElementById("#lib-card").addEventListener('click', event => {
+        document.querySelector(".header").classList.remove("open")
+    })
+
 })
 
 

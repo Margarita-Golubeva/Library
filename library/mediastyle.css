@@ -64,7 +64,7 @@
     width: 332px;
     height: 570px;
     text-align: center;
-    background-color: #000;
+    background-color: #0C0C0E;
     visibility: hidden;
     transition: transform 0.5s, visibility 0.5s;
     z-index: 2;
