@@ -1,5 +1,23 @@
 /* media code */
 
+@media screen and (max-width: 1200px) {
+
+    /* Favorites style start */
+
+.radio-choice {
+    flex-wrap: wrap;
+}
+
+.book-list-winter, .book-list-spring, .book-list-summer, .book-list-autumn {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+}
+
+/* Favorites style end */
+
+}
+
 @media screen and (max-width: 1024px) {
 
 /* Header style start */
@@ -107,24 +125,6 @@
 }
 
 /* About style end */
-
-/* Favorites style start */
-
-.radio-choice {
-    flex-wrap: wrap;
-}
-
-.book-list-winter, .book-list-spring, .book-list-summer, .book-list-autumn {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-}
-
-#ownbtn {
-    display: none;
-}
-
-/* Favorites style end */
 
 /* Coffee shop style start */
 
