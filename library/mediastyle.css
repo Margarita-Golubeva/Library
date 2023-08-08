@@ -1,5 +1,50 @@
 /* media code */
 
+@media screen and (max-width: 1400px) {
+    /* About style start */
+
+.gallery {
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+}
+
+#pic3, #pic4, #pic5 {
+    display: none;
+}
+
+.buttons-container {
+    width: fit-content;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+#mediabtn2 {
+    display: none;
+}
+
+/* About style end */
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    /* Favorites style start */
+
+.radio-choice {
+    flex-wrap: wrap;
+}
+
+.book-list-winter, .book-list-spring, .book-list-summer, .book-list-autumn {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+}
+
+/* Favorites style end */
+
+}
+
 @media screen and (max-width: 1024px) {
 
 /* Header style start */
@@ -19,7 +64,7 @@
     width: 332px;
     height: 570px;
     text-align: center;
-    background-color: #000;
+    background-color: #0C0C0E;
     visibility: hidden;
     transition: transform 0.5s, visibility 0.5s;
     z-index: 2;
@@ -66,6 +111,9 @@
 .gallery {
     justify-content: center;
     position: relative;
+    max-width: 614px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .caret-rigth, .caret-left {
@@ -75,13 +123,13 @@
 
 .caret-left {
     position: absolute;
-    left: 58px;
+    left: 0;
     top: 288px;
 }
 
 .caret-rigth {
     position: absolute;
-    right: 58px;
+    right: 0;
     top: 288px;
 }
 
@@ -100,33 +148,17 @@
     justify-content: space-between;
 }
 
-.contacts {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+#mediabtn2 {
+    display: block;
 }
 
 /* About style end */
 
-/* Favorites style start */
-
-.radio-choice {
-    flex-wrap: wrap;
-}
-
-.book-list-winter, .book-list-spring, .book-list-summer, .book-list-autumn {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-}
-
-#ownbtn {
-    display: none;
-}
-
-/* Favorites style end */
-
 /* Coffee shop style start */
+
+.shop-description {
+    letter-spacing: 1.9px;
+}
 
 .menu {
     flex-direction: column;
@@ -143,6 +175,12 @@
 /* Coffee shop style end */
 
 /* Our contacts style start */
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
 .contacts-area {
     display: flex;
@@ -192,6 +230,10 @@
 
 .footer-line {
     width: 100%;
+}
+
+.rs-school {
+    margin-left: 0;
 }
 /* Footer style end */
   
