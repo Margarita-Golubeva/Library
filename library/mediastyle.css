@@ -73,7 +73,7 @@
 .header-list {
     display: block;
     padding-top: 80px;
-    padding-right: 25px;
+    padding-right: 5px;
 }
 
 .header-item {
@@ -206,7 +206,7 @@
 .get {
     text-align: center;
     margin-top: 15px;
-    margin-bottom: 35px;
+    margin-bottom: 37px;
 }
   
 .description {
