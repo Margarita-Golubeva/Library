@@ -62,17 +62,19 @@
     right: -332px;
     top: 0;
     width: 332px;
-    height: 570px;
+    height: 500px;
+    margin-top: 70px;
     text-align: center;
     background-color: #0C0C0E;
     visibility: hidden;
     transition: transform 0.5s, visibility 0.5s;
     z-index: 2;
+
 }
 
 .header-list {
     display: block;
-    padding-top: 80px;
+    padding-top: 10px;
     padding-right: 5px;
 }
 
