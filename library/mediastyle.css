@@ -62,8 +62,8 @@
     right: -332px;
     top: 0;
     width: 332px;
-    height: 500px;
-    margin-top: 70px;
+    height: 570px;
+    margin-top: 0;
     text-align: center;
     background-color: #0C0C0E;
     visibility: hidden;
@@ -74,7 +74,7 @@
 
 .header-list {
     display: block;
-    padding-top: 10px;
+    padding-top: 80px;
     padding-right: 5px;
 }
 
