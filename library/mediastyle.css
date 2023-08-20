@@ -31,10 +31,18 @@
 
     /* Favorites style start */
 
-.radio-choice {
-    flex-wrap: wrap;
-}
+  .sticky-wrapper {
+    max-width: 1200px;
+  }
 
+  .radio-choice {
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
 .book-list-winter, .book-list-spring, .book-list-summer, .book-list-autumn {
     flex-direction: column;
     align-items: center;
