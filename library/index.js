@@ -1,23 +1,6 @@
 // burger menu start
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("burger").addEventListener("click", function() {
-       document.querySelector(".header").classList.toggle("open") 
-    });
-
-    document.getElementById("nav-menu").addEventListener('click', event => {
-        event._isClickWithInMenu = true;
-    });
-
-    document.getElementById("burger").addEventListener('click', event => {
-        event._isClickWithInMenu = true;
-    });
-
-    document.body.addEventListener('click', event => {
-        if (event._isClickWithInMenu) return;
-        document.querySelector(".header").classList.remove("open")
-    });
-
     document.getElementById("#about").addEventListener('click', event => {
         document.querySelector(".header").classList.remove("open")
     })
@@ -40,6 +23,65 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // burger menu end
 
+// profile
+
+const headerLog = document.querySelector('.header-log');
+const profileBeforeRegistration = document.querySelector('.profile-before-registration');
+
+headerLog.addEventListener('click', () => {
+    toggleProfileCard(profileBeforeRegistration);
+    closeBurgerMenu(); // Close burger menu
+    event.stopPropagation(); // Prevent the click from propagating further
+});
+
+// Close profile card when clicking outside of it
+document.addEventListener('click', (event) => {
+    if (!profileBeforeRegistration.contains(event.target)) {
+        profileBeforeRegistration.classList.remove('active');
+    }
+});
+
+// Function to toggle active class and display profile card
+function toggleProfileCard(profileCard) {
+    profileCard.classList.toggle('active');
+}
+
+// Close profile card on header click
+document.querySelector('header').addEventListener('click', () => {
+    profileBeforeRegistration.classList.remove('active');
+});
+
+// Close profile card on body click
+document.body.addEventListener('click', () => {
+    profileBeforeRegistration.classList.remove('active');
+});
+
+// Close burger menu
+function closeBurgerMenu() {
+    document.querySelector(".header").classList.remove("open");
+}
+
+// Toggle burger menu
+document.getElementById("burger").addEventListener("click", function() {
+    document.querySelector(".header").classList.toggle("open");
+});
+
+// Prevent closing burger menu when clicking within the menu
+document.getElementById("nav-menu").addEventListener('click', event => {
+    event._isClickWithInMenu = true;
+});
+
+document.getElementById("burger").addEventListener('click', event => {
+    event._isClickWithInMenu = true;
+});
+
+// Close burger menu when clicking outside of it
+document.body.addEventListener('click', event => {
+    if (!event._isClickWithInMenu) {
+        closeBurgerMenu();
+    }
+});
+    
 // favorites
 
 const bookLists = [
