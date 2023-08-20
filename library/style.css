@@ -386,7 +386,7 @@ input:checked ~ span {
 }
 
 @keyframes booklistHide {
-  0% {opacity: 1;}
+  from {opacity: 1;}
   to {opacity: 0;}
 }
 
@@ -405,14 +405,9 @@ input:checked ~ span {
   margin-top: 35px;
 }
 
-
 #book-list-spring, #book-list-summer, #book-list-autumn  {
   display: none;
-  animation: booklistShow 2s;
 }
-
-
-
 
 .book {
   position: relative;

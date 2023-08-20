@@ -37,9 +37,98 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("#lib-card").addEventListener('click', event => {
         document.querySelector(".header").classList.remove("open")
     })
-}) 
+
 // burger menu end
 
+
+
+
+// favorites
+
+    const listWinter = document.getElementById('book-list-winter');
+    const listSpring = document.getElementById('book-list-spring');
+    const listSummer = document.getElementById('book-list-summer');
+    const listAutumn = document.getElementById('book-list-autumn');
+
+    const radioWinter = document.getElementById('winter');
+    const radioSpring = document.getElementById('spring');
+    const radioSummer = document.getElementById('summer');
+    const radioAutumn = document.getElementById('autumn');
+
+    // winter
+
+    radioWinter.addEventListener('click', event => {
+        listSpring.style.display = 'none';
+    })
+
+    radioWinter.addEventListener('click', event => {
+        listSummer.style.display = 'none';
+    })
+
+    radioWinter.addEventListener('click', event => {
+        listAutumn.style.display = 'none';
+    })
+
+    radioWinter.addEventListener('click', event => {
+        listWinter.style.display = 'flex';
+    })
+
+    // hiding spring
+
+    radioSpring.addEventListener('click', event => {
+        listWinter.style.display = 'none';
+    })
+
+    radioSpring.addEventListener('click', event => {
+        listSummer.style.display = 'none';
+    })
+
+    radioSpring.addEventListener('click', event => {
+        listAutumn.style.display = 'none';
+    })
+
+    radioSpring.addEventListener('click', event => {
+        listSpring.style.display = 'flex';
+    })
+
+    // hiding summer
+
+
+    radioSummer.addEventListener('click', event => {
+        listWinter.style.display = 'none';
+    })
+
+    radioSummer.addEventListener('click', event => {
+        listSpring.style.display = 'none';
+    })
+
+    radioSummer.addEventListener('click', event => {
+        listAutumn.style.display = 'none';
+    })
+
+    radioSummer.addEventListener('click', event => {
+        listSummer.style.display = 'flex';
+    })
+
+     // hiding autumn
+
+    radioAutumn.addEventListener('click', event => {
+        listWinter.style.display = 'none';
+    })
+
+    radioAutumn.addEventListener('click', event => {
+        listSpring.style.display = 'none';
+    })
+
+    radioAutumn.addEventListener('click', event => {
+        listSummer.style.display = 'none';
+    })
+
+    radioAutumn.addEventListener('click', event => {
+        listAutumn.style.display = 'flex';
+    })
+
+})
 
 
 
