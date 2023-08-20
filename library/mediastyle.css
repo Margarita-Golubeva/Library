@@ -31,21 +31,27 @@
 
     /* Favorites style start */
 
-  .sticky-wrapper {
+  .body-wrapper {
+    overflow: visible;
+    }
+
+  .fav-wrapper {
     max-width: 1200px;
+    position: relative;
   }
 
   .radio-choice {
     display: flex;
     flex-wrap: wrap;
     position: sticky;
-    top: 0;
-    z-index: 1;
+    background-color: #fff;
+    top: 15px;
+    z-index: 2;
   }
   
-.book-list-winter, .book-list-spring, .book-list-summer, .book-list-autumn {
+.book-list {
     flex-direction: column;
-    align-items: center;
+    align-content: center;
     margin-left: 0;
 }
 
@@ -66,7 +72,7 @@
 }
 
 .navigation {
-    position: absolute;
+    position: fixed;
     right: -332px;
     top: 0;
     width: 332px;
