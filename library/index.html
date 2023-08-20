@@ -48,7 +48,7 @@
                 </div>
                 <div class="profile-before-registration" id="profile-before-registration">
                     <h3 class="profile-name">Profile</h3>
-                    <a href="#">Log In</a>
+                    <a href="#" id="login-link">Log In</a>
                     <a href="#">Register</a>
                  </div>
                  <div class="profile-after-registration" id="profile-after-registration">
@@ -71,6 +71,31 @@
             </div>
         </div>
         </section>
+        <div class="popup">
+        <div class="login-modal">
+            <p class="login-title">LOGIN</p>
+            <button class="close-btn" id="close-btn">
+                <span></span><span></span>
+            </button>
+            <div class="modal-input-lines">
+                <form action="/" class="login-form">
+                    <div class="login-lines">
+                    <p class="inside-lines">E-mail or readers card</p>
+                    <label for="login-user-name"></label>
+                    <input type="text" id="login-user-name" name="user-name">
+                    <p class="inside-lines">Password</p>
+                    <label for="login-password"></label>
+                    <input type="password" id="login-password" name="login-password" minlength="8">
+                    </div>
+                    <input class="signlog-button" type="submit" value="Log In" id="log-in-btn">
+                </form>
+                <div class="options">
+                <div class="question">Don’t have an account?</div>
+                <div class="register">Register</div>
+                </div>
+            </div>
+        </div>
+        </div>
         <div class="main-info">
             <section class="about">
                 <h2 id="about">About</h2>

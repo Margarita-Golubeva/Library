@@ -81,6 +81,49 @@ document.body.addEventListener('click', event => {
         closeBurgerMenu();
     }
 });
+
+// Log In Modal
+
+    const popup = document.querySelector('.popup');
+    const loginLink = document.getElementById('login-link');
+    const loginModal = document.querySelector('.login-modal');
+    const closeButton = document.getElementById('close-btn');
+    const loginForm = document.querySelector('.login-form');
+    const logInButton = document.getElementById('log-in-btn');
+
+    // Open the modal when clicking on the login link
+    loginLink.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the link from navigating
+        popup.classList.add('shown');
+        loginModal.classList.add('shown');
+        document.body.style.overflow = 'hidden';
+    });
+
+    // Close the modal when clicking the close button
+    closeButton.addEventListener('click', () => {
+        closeLoginModal();
+    });
+
+    // Close the modal when clicking outside the modal
+    popup.addEventListener('click', (event) => {
+        if (event.target === popup) {
+            closeLoginModal();
+        }
+    });
+
+    // Close the modal when submitting the login form
+    loginForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent form submission
+        // Here you can add code to check localStorage for email/card and password
+        closeLoginModal();
+    });
+
+    // Function to close the login modal
+    function closeLoginModal() {
+        popup.classList.remove('shown');
+        loginModal.classList.remove('shown');
+        document.body.style.overflow = 'auto';
+    }
     
 // favorites
 
