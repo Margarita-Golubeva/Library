@@ -40,95 +40,53 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // burger menu end
 
-
-
-
 // favorites
 
-    const listWinter = document.getElementById('book-list-winter');
-    const listSpring = document.getElementById('book-list-spring');
-    const listSummer = document.getElementById('book-list-summer');
-    const listAutumn = document.getElementById('book-list-autumn');
+const bookLists = [
+    document.getElementById('book-list-winter'),
+    document.getElementById('book-list-spring'),
+    document.getElementById('book-list-summer'),
+    document.getElementById('book-list-autumn')
+];
 
-    const radioWinter = document.getElementById('winter');
-    const radioSpring = document.getElementById('spring');
-    const radioSummer = document.getElementById('summer');
-    const radioAutumn = document.getElementById('autumn');
+const seasonRadios = [
+    document.getElementById('winter'),
+    document.getElementById('spring'),
+    document.getElementById('summer'),
+    document.getElementById('autumn')
+];
 
-    // winter
+function switchBookList(nextListIndex) {
+    const currentList = document.querySelector('.book-list.active');
+    const nextList = bookLists[nextListIndex];
 
-    radioWinter.addEventListener('click', event => {
-        listSpring.style.display = 'none';
-    })
+    if (currentList) {
+        currentList.style.animation = 'booklistHide 1s linear forwards';
+        currentList.addEventListener('animationend', () => {
+            currentList.style.display = 'none';
+            currentList.classList.remove('active');
+        }, { once: true });
+    }
 
-    radioWinter.addEventListener('click', event => {
-        listSummer.style.display = 'none';
-    })
+    if (nextList) {
+        setTimeout(() => {
+            nextList.style.animation = 'booklistShow 1s linear forwards';
+            nextList.style.display = 'flex';
+            nextList.classList.add('active');
+        }, 1000);
+    }
+}
 
-    radioWinter.addEventListener('click', event => {
-        listAutumn.style.display = 'none';
-    })
-
-    radioWinter.addEventListener('click', event => {
-        listWinter.style.display = 'flex';
-    })
-
-    // hiding spring
-
-    radioSpring.addEventListener('click', event => {
-        listWinter.style.display = 'none';
-    })
-
-    radioSpring.addEventListener('click', event => {
-        listSummer.style.display = 'none';
-    })
-
-    radioSpring.addEventListener('click', event => {
-        listAutumn.style.display = 'none';
-    })
-
-    radioSpring.addEventListener('click', event => {
-        listSpring.style.display = 'flex';
-    })
-
-    // hiding summer
+seasonRadios.forEach((radio, index) => {
+    radio.addEventListener('click', () => {
+        switchBookList(index);
+    });
+});
 
 
-    radioSummer.addEventListener('click', event => {
-        listWinter.style.display = 'none';
-    })
+});
 
-    radioSummer.addEventListener('click', event => {
-        listSpring.style.display = 'none';
-    })
 
-    radioSummer.addEventListener('click', event => {
-        listAutumn.style.display = 'none';
-    })
-
-    radioSummer.addEventListener('click', event => {
-        listSummer.style.display = 'flex';
-    })
-
-     // hiding autumn
-
-    radioAutumn.addEventListener('click', event => {
-        listWinter.style.display = 'none';
-    })
-
-    radioAutumn.addEventListener('click', event => {
-        listSpring.style.display = 'none';
-    })
-
-    radioAutumn.addEventListener('click', event => {
-        listSummer.style.display = 'none';
-    })
-
-    radioAutumn.addEventListener('click', event => {
-        listAutumn.style.display = 'flex';
-    })
-
-})
 
 
 

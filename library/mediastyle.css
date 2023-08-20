@@ -33,6 +33,7 @@
 
   .sticky-wrapper {
     max-width: 1200px;
+    position: relative;
   }
 
   .radio-choice {
@@ -40,12 +41,12 @@
     flex-wrap: wrap;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
   }
   
-.book-list-winter, .book-list-spring, .book-list-summer, .book-list-autumn {
+.book-list {
     flex-direction: column;
-    align-items: center;
+    align-content: center;
     margin-left: 0;
 }
 
