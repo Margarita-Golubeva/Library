@@ -31,7 +31,11 @@
 
     /* Favorites style start */
 
-  .sticky-wrapper {
+  .body-wrapper {
+    overflow: visible;
+    }
+
+  .fav-wrapper {
     max-width: 1200px;
     position: relative;
   }
@@ -40,7 +44,8 @@
     display: flex;
     flex-wrap: wrap;
     position: sticky;
-    top: 0;
+    background-color: #fff;
+    top: 15px;
     z-index: 2;
   }
   
@@ -67,7 +72,7 @@
 }
 
 .navigation {
-    position: absolute;
+    position: fixed;
     right: -332px;
     top: 0;
     width: 332px;

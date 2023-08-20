@@ -60,7 +60,7 @@ function switchBookList(nextListIndex) {
     const currentList = document.querySelector('.book-list.active');
     const nextList = bookLists[nextListIndex];
 
-    if (currentList) {
+    if (currentList && nextList !== currentList) {
         currentList.style.animation = 'booklistHide 0.3s linear forwards';
         currentList.addEventListener('animationend', () => {
             currentList.style.display = 'none';
@@ -69,11 +69,13 @@ function switchBookList(nextListIndex) {
     }
 
     if (nextList) {
-        setTimeout(() => {
-            nextList.style.animation = 'booklistShow 0.3s linear forwards';
-            nextList.style.display = 'flex';
-            nextList.classList.add('active');
-        }, 300);
+        if (!nextList.classList.contains('active')) {
+            setTimeout(() => {
+                nextList.style.animation = 'booklistShow 0.3s linear forwards';
+                nextList.style.display = 'flex';
+                nextList.classList.add('active');
+            }, 300);
+        }
     }
 }
 
