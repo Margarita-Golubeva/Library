@@ -1016,7 +1016,7 @@ li:last-child {
   content: " ";
   background: #fff;
   color: #fff;
-  width: 1400px;
+  max-width: 1400px;
   height: 1px;
   text-align: center;
   margin-top: 4px;
