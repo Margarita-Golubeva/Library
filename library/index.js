@@ -159,7 +159,7 @@ function switchBookList(nextListIndex) {
                 nextList.style.animation = 'booklistShow 0.3s linear forwards';
                 nextList.style.display = 'flex';
                 nextList.classList.add('active');
-            }, 300);
+            }, 280);
         }
     }
 }
