@@ -40,6 +40,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // burger menu end
 
+// profile
+
+const headerLog = document.querySelector('.header-log');
+const profileBeforeRegistration = document.querySelector('.profile-before-registration');
+
+headerLog.addEventListener('click', () => {
+    toggleProfileCard(profileBeforeRegistration);
+});
+
+// Function to toggle active class and display profile card
+function toggleProfileCard(profileCard) {
+    profileCard.classList.toggle('active');
+}
+
+
+
+    
 // favorites
 
 const bookLists = [
