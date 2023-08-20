@@ -61,7 +61,7 @@ function switchBookList(nextListIndex) {
     const nextList = bookLists[nextListIndex];
 
     if (currentList) {
-        currentList.style.animation = 'booklistHide 1s linear forwards';
+        currentList.style.animation = 'booklistHide 0.3s linear forwards';
         currentList.addEventListener('animationend', () => {
             currentList.style.display = 'none';
             currentList.classList.remove('active');
@@ -70,10 +70,10 @@ function switchBookList(nextListIndex) {
 
     if (nextList) {
         setTimeout(() => {
-            nextList.style.animation = 'booklistShow 1s linear forwards';
+            nextList.style.animation = 'booklistShow 0.3s linear forwards';
             nextList.style.display = 'flex';
             nextList.classList.add('active');
-        }, 1000);
+        }, 300);
     }
 }
 
