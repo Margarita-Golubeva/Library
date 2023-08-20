@@ -301,7 +301,7 @@ h1 {
 }
 
 .popup {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -312,21 +312,29 @@ h1 {
   background-color: #00000076;
 }
 
+.popup.shown {
+  display: flex;
+}
+
 .login-title {
   text-align: center;
   font-family: Forum;
   font-size: 20px;
   line-height: 20px; /* 100% */
   letter-spacing: 0.4px;
-  z-index: 2;
 }
 
 .login-modal {
+  display: none;
   width: 250px;
   height: 262px;
   background-color: #fff;
   position: relative;
 }
+
+.login-modal.shown {
+  display: block;
+} 
 
 .close-btn {
   position: absolute;
@@ -430,6 +438,11 @@ h1 {
 /* modal login / register end */
 
 /* Welcome style end */
+
+.main {
+  max-width: 1440px;
+  margin: auto;
+}
 
 .main-info {
   box-sizing: border-box;
