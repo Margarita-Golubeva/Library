@@ -88,23 +88,22 @@ document.body.addEventListener('click', event => {
     const loginLink = document.getElementById('login-link');
     const loginFromLibCard = document.getElementById('login-from-lib-card');
     const loginModal = document.querySelector('.login-modal');
-    const closeButton = document.getElementById('close-btn');
+    const closeButton = document.getElementById('login-close-btn');
     const loginForm = document.querySelector('.login-form');
     const logInButton = document.getElementById('log-in-btn');
 
     // Open the modal when clicking on the login link
     loginLink.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent the link from navigating
+        event.preventDefault();
         popup.classList.add('shown');
-        loginModal.classList.add('shown');
+        loginModal.classList.add('showed');
         document.body.style.overflow = 'hidden';
     });
 
-    // Open the modal when clicking on the login-from-lib-card
     loginFromLibCard.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent the link from navigating
+        event.preventDefault();
         popup.classList.add('shown');
-        loginModal.classList.add('shown');
+        loginModal.classList.add('showed');
         document.body.style.overflow = 'hidden';
     });
 
@@ -123,14 +122,14 @@ document.body.addEventListener('click', event => {
     // Close the modal when submitting the login form
     loginForm.addEventListener('submit', (event) => {
         event.preventDefault(); // Prevent form submission
-        // Here you can add code to check localStorage for email/card and password
+        // Here code to check localStorage for email/card and password
         closeLoginModal();
     });
 
     // Function to close the login modal
     function closeLoginModal() {
         popup.classList.remove('shown');
-        loginModal.classList.remove('shown');
+        loginModal.classList.remove('showed');
         document.body.style.overflow = 'auto';
     }
 
@@ -143,9 +142,90 @@ document.body.addEventListener('click', event => {
     passwordInput.value = '';
 
     popup.classList.remove('shown');
-    loginModal.classList.remove('shown');
+    loginModal.classList.remove('showed');
     document.body.style.overflow = 'auto';
 }
+
+// register modal
+
+const registerLink = document.getElementById('register-link');
+const registerModal = document.querySelector('.login-register');
+const registerFromLibCard = document.getElementById('register-from-lib-card');
+const regCloseButton = document.getElementById('reg-close-btn');
+const linkToLogin = document.getElementById('move-to-login');
+const linkToReg = document.getElementById('link-to-register');
+
+// open modal window
+
+registerLink.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent the link from navigating
+    popup.classList.add('shown');
+    loginModal.classList.remove('showed');
+    registerModal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+});
+
+
+registerFromLibCard.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent the link from navigating
+    popup.classList.add('shown');
+    loginModal.classList.remove('showed');
+    registerModal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+});
+
+// Open the login modal when clicking on the move-to-login
+    linkToLogin.addEventListener('click', (event) => {
+        event.preventDefault();
+        popup.classList.add('shown');
+        registerModal.classList.remove('show');
+        loginModal.classList.add('showed');
+        document.body.style.overflow = 'hidden';
+    });
+
+//Open register modal when clicking on the sign-up-btn
+linkToReg.addEventListener('click', (event) => {
+    event.preventDefault();
+    popup.classList.add('shown');
+    loginModal.classList.remove('showed');
+    registerModal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+});
+
+    // Close the modal when clicking the close button
+    regCloseButton.addEventListener('click', () => {
+        closeLoginModal();
+    });
+
+// close modal
+
+    function closeLoginModal() {
+        popup.classList.remove('shown');
+        registerModal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+    }
+
+    function closeLoginModal() {
+    const passwordInput = document.getElementById('login-password');
+
+    const registerUserName = document.getElementById('register-user-name');
+    const registerUserLastName = document.getElementById('register-user-last-name');
+    const registerEmail = document.getElementById('register-email');
+    const registerPassword = document.getElementById('register-password');
+
+
+    // Clear the input fields
+    registerUserName.value = '';
+    registerUserLastName.value = '';
+    registerEmail.value = '';
+    registerPassword.value = '';
+
+
+    popup.classList.remove('shown');
+    registerModal.classList.remove('show');
+    document.body.style.overflow = 'auto';
+}
+
     
 // favorites
 
