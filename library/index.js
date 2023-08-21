@@ -107,6 +107,17 @@ document.body.addEventListener('click', event => {
         document.body.style.overflow = 'hidden';
     });
 
+    const buyButtons = document.querySelectorAll('.buy-button');
+    
+    buyButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            popup.classList.add('shown');
+            loginModal.classList.add('showed');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
     // Close the modal when clicking the close button
     closeButton.addEventListener('click', () => {
         closeLoginModal();
@@ -182,6 +193,8 @@ registerFromLibCard.addEventListener('click', (event) => {
         loginModal.classList.add('showed');
         document.body.style.overflow = 'hidden';
     });
+
+    
 
 //Open register modal when clicking on the sign-up-btn
 linkToReg.addEventListener('click', (event) => {
