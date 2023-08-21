@@ -310,6 +310,7 @@ h1 {
   top: 0;
   left: 0;
   background-color: #00000076;
+  z-index: 2;
 }
 
 .popup.shown {
@@ -330,6 +331,7 @@ h1 {
   height: 262px;
   background-color: #fff;
   position: relative;
+  z-index: 5;
 }
 
 .login-modal.shown {

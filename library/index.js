@@ -86,6 +86,7 @@ document.body.addEventListener('click', event => {
 
     const popup = document.querySelector('.popup');
     const loginLink = document.getElementById('login-link');
+    const loginFromLibCard = document.getElementById('login-from-lib-card');
     const loginModal = document.querySelector('.login-modal');
     const closeButton = document.getElementById('close-btn');
     const loginForm = document.querySelector('.login-form');
@@ -93,6 +94,14 @@ document.body.addEventListener('click', event => {
 
     // Open the modal when clicking on the login link
     loginLink.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the link from navigating
+        popup.classList.add('shown');
+        loginModal.classList.add('shown');
+        document.body.style.overflow = 'hidden';
+    });
+
+    // Open the modal when clicking on the login-from-lib-card
+    loginFromLibCard.addEventListener('click', (event) => {
         event.preventDefault(); // Prevent the link from navigating
         popup.classList.add('shown');
         loginModal.classList.add('shown');
@@ -124,6 +133,19 @@ document.body.addEventListener('click', event => {
         loginModal.classList.remove('shown');
         document.body.style.overflow = 'auto';
     }
+
+    function closeLoginModal() {
+    const emailInput = document.getElementById('login-user-name');
+    const passwordInput = document.getElementById('login-password');
+
+    // Clear the input fields
+    emailInput.value = '';
+    passwordInput.value = '';
+
+    popup.classList.remove('shown');
+    loginModal.classList.remove('shown');
+    document.body.style.overflow = 'auto';
+}
     
 // favorites
 
