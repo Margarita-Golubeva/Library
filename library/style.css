@@ -310,6 +310,7 @@ h1 {
   top: 0;
   left: 0;
   background-color: #00000076;
+  z-index: 2;
 }
 
 .popup.shown {
@@ -330,11 +331,25 @@ h1 {
   height: 262px;
   background-color: #fff;
   position: relative;
+  z-index: 5;
 }
 
-.login-modal.shown {
+.login-modal.showed {
   display: block;
 } 
+
+.login-register {
+  display: none;
+  width: 250px;
+  height: 382px;
+  background-color: #fff;
+  position: relative;
+  z-index: 5;
+}
+
+.login-register.show {
+  display: block;
+}
 
 .close-btn {
   position: absolute;
@@ -382,7 +397,7 @@ h1 {
   margin-left: 25px;
 }
 
-#login-user-name, #login-password {
+#login-user-name, #login-password, #register-user-name, #register-user-last-name, #register-email, #register-password {
   width: 200px;
   height: 20px;
   border: 1px solid #BB945F;
@@ -397,7 +412,7 @@ h1 {
   letter-spacing: 0.6px;
 }
 
-#log-in-btn {
+#log-in-btn, #sign-up-btn {
   margin-top: 10px;
   margin-left: 25px;
 }

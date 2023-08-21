@@ -49,7 +49,7 @@
                 <div class="profile-before-registration" id="profile-before-registration">
                     <h3 class="profile-name">Profile</h3>
                     <a href="#" id="login-link">Log In</a>
-                    <a href="#">Register</a>
+                    <a href="#" id="register-link">Register</a>
                  </div>
                  <div class="profile-after-registration" id="profile-after-registration">
                     <h3 class="profile-name">Profile</h3>
@@ -74,7 +74,7 @@
         <div class="popup">
         <div class="login-modal">
             <p class="login-title">LOGIN</p>
-            <button class="close-btn" id="close-btn">
+            <button class="close-btn" id="login-close-btn">
                 <span></span><span></span>
             </button>
             <div class="modal-input-lines">
@@ -82,7 +82,7 @@
                     <div class="login-lines">
                     <p class="inside-lines">E-mail or readers card</p>
                     <label for="login-user-name"></label>
-                    <input type="text" id="login-user-name" name="user-name" required>
+                    <input type="email" id="login-user-name" name="user-name" required>
                     <p class="inside-lines">Password</p>
                     <label for="login-password"></label>
                     <input type="password" id="login-password" name="login-password" minlength="8" required>
@@ -91,7 +91,36 @@
                 </form>
                 <div class="options">
                 <div class="question">Don’t have an account?</div>
-                <div class="register">Register</div>
+                <div class="register" id="link-to-register">Register</div>
+                </div>
+            </div>
+        </div>
+        <div class="login-register">
+            <p class="login-title">REGISTER</p>
+            <button class="close-btn" id="reg-close-btn">
+                <span></span><span></span>
+            </button>
+            <div class="modal-input-lines">
+                <form action="/" class="register-form">
+                    <div class="login-lines">
+                    <p class="inside-lines">First name</p>
+                    <label for="register-user-name"></label>
+                    <input type="text" id="register-user-name" name="register-user-name" required>
+                    <p class="inside-lines">Last name</p>
+                    <label for="register-user-last-name"></label>
+                    <input type="text" id="register-user-last-name" name="register-user-last-name" required>
+                    <p class="inside-lines">E-mail or readers card</p>
+                    <label for="register-email"></label>
+                    <input type="email" id="register-email" name="register-email" required>
+                    <p class="inside-lines">Password</p>
+                    <label for="register-password"></label>
+                    <input type="password" id="register-password" name="register-password" minlength="8" required>
+                    </div>
+                    <input class="signlog-button" type="submit" value="Sign Up" id="sign-up-btn">
+                </form>
+                <div class="options">
+                <div class="question">Already have an account?</div>
+                <div class="register" id="move-to-login">Login</div>
                 </div>
             </div>
         </div>
@@ -400,8 +429,8 @@
                         <p class="get">Get a reader card</p>
                         <p class="description">You will be able to see a reader card after logging into account or you can register a new account</p>
                         <div class="sign-log">
-                            <input class="signlog-button" type="button" value="Sign Up">
-                            <input class="signlog-button" type="button" value="Log In">
+                            <input class="signlog-button" id="register-from-lib-card" type="button" value="Sign Up">
+                            <input class="signlog-button" id="login-from-lib-card" type="button" value="Log In">
                         </div>
                     </div>
                 </div>
