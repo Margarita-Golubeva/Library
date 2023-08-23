@@ -151,7 +151,7 @@ h1 {
 .profile-before-registration, .profile-after-registration {
   position: absolute;
   display: none;
-  top: 58px;
+  top: 28px;
   right: 20px;
   width: 80px;
   height: 115px;
@@ -296,9 +296,6 @@ h1 {
 }
 
 /* modal login / register start */
-* {
-  outline: red;
-}
 
 .popup {
   display: none;
@@ -533,37 +530,27 @@ h1 {
   }
 }
 
+.page-buttons.active {
+  background-color: #BB945F;
+}
+
+.page-buttons-bg.active {
+  cursor: default;
+}
+
+.pic {
+  min-width: 450px;
+}
+
 /* Gallery slider */
 
 .carousel {
   display: flex;
   position: relative;
   gap: 25px;
-  left: -475px;
+  left: 0px;
+  transition-duration: 1s;
 }
-
-@keyframes move-left {
-  from {left: -475px}
-  to {left: 0px}
-}
-
-.transition-left {
-  animation-name: move-left;
-  animation-timing-function: ease-out;
-  animation-duration: 3s;
-}
-
-@keyframes move-right {
-  from {left: -475px}
-  to {left: -950px}
-}
-
-.transition-right {
-  animation-name: move-right;
-  animation-timing-function: ease-out;
-  animation-duration: 3s;
-}
-
 
 /* About style end */
 

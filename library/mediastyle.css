@@ -142,7 +142,7 @@
     max-width: 450px;
   }
 
-.caret-rigth, .caret-left {
+.caret-right, .caret-left {
     display: inline-flex;
     cursor: pointer;
 }
@@ -153,7 +153,7 @@
     top: 288px;
 }
 
-.caret-rigth {
+.caret-right {
     position: absolute;
     right: 0;
     top: 288px;
