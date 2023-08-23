@@ -151,7 +151,7 @@ h1 {
 .profile-before-registration, .profile-after-registration {
   position: absolute;
   display: none;
-  top: 28px;
+  top: 58px;
   right: 20px;
   width: 80px;
   height: 115px;
@@ -476,13 +476,16 @@ h1 {
 
 .gallery {
   display: flex;
-  justify-content: space-between;
   margin-left: 20px;
   margin-right: 20px;
+  max-width: 1440px;
 }
 
-#pic4, #pic5 {
-  display: none;
+.pics {
+  display: flex;
+  max-width: 1400px;
+  overflow: hidden;
+  gap: 25px;
 }
 
 .caret-rigth, .caret-left {
@@ -518,7 +521,7 @@ h1 {
   display: inline-block;
 }
 
-#mediabtn {
+#mediabtn4, #mediabtn5 {
   display: none;
 }
 

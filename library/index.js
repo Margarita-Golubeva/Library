@@ -1,25 +1,14 @@
+document.addEventListener("DOMContentLoaded", function() {
+    
 // burger menu start
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("#about").addEventListener('click', event => {
-        document.querySelector(".header").classList.remove("open")
-    })
+const headerLinks = document.querySelectorAll('.header-item');
 
-    document.getElementById("#favorites").addEventListener('click', event => {
+headerLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
         document.querySelector(".header").classList.remove("open")
-    })
-
-    document.getElementById("#coffee-shop").addEventListener('click', event => {
-        document.querySelector(".header").classList.remove("open")
-    })
-
-    document.getElementById("#contacts").addEventListener('click', event => {
-        document.querySelector(".header").classList.remove("open")
-    })
-
-    document.getElementById("#lib-card").addEventListener('click', event => {
-        document.querySelector(".header").classList.remove("open")
-    })
+    });
+});
 
 // burger menu end
 
@@ -239,7 +228,6 @@ linkToReg.addEventListener('click', (event) => {
     document.body.style.overflow = 'auto';
 }
 
-    
 // favorites
 
 const bookLists = [
