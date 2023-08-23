@@ -533,6 +533,38 @@ h1 {
   }
 }
 
+/* Gallery slider */
+
+.carousel {
+  display: flex;
+  position: relative;
+  gap: 25px;
+  left: -475px;
+}
+
+@keyframes move-left {
+  from {left: -475px}
+  to {left: 0px}
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-timing-function: ease-out;
+  animation-duration: 3s;
+}
+
+@keyframes move-right {
+  from {left: -475px}
+  to {left: -950px}
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-timing-function: ease-out;
+  animation-duration: 3s;
+}
+
+
 /* About style end */
 
 /* Favorites style start */
