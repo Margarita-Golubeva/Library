@@ -151,7 +151,7 @@ h1 {
 .profile-before-registration, .profile-after-registration {
   position: absolute;
   display: none;
-  top: 58px;
+  top: 28px;
   right: 20px;
   width: 80px;
   height: 115px;
@@ -296,9 +296,6 @@ h1 {
 }
 
 /* modal login / register start */
-* {
-  outline: red;
-}
 
 .popup {
   display: none;
@@ -531,6 +528,28 @@ h1 {
     background-color: #BB945F;
     transition-duration: 0.5s;
   }
+}
+
+.page-buttons.active {
+  background-color: #BB945F;
+}
+
+.page-buttons-bg.active {
+  cursor: default;
+}
+
+.pic {
+  min-width: 450px;
+}
+
+/* Gallery slider */
+
+.carousel {
+  display: flex;
+  position: relative;
+  gap: 25px;
+  left: 0px;
+  transition-duration: 1s;
 }
 
 /* About style end */
