@@ -1412,6 +1412,10 @@ li:last-child {
   height: 63px;
 }
 
+.block-card {
+  display: none;
+}
+
 .block-inside-card {
   padding: 0;
   margin: 0;
