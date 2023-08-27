@@ -343,8 +343,14 @@ class User {
     }
 }
 
-function generateRandomCardNumber() {
-    return Math.floor(Math.random() * 1000000000);
+function generateCardNumber() {
+    const hexChars = '0123456789ABCDEF';
+    let hexNumber = '';
+    for (let i = 0; i < 9; i++) {
+        const randomIndex = Math.floor(Math.random() * hexChars.length);
+        hexNumber += hexChars.charAt(randomIndex);
+    }
+    return hexNumber;
 }
 
 // Check if the user is already logged in
@@ -354,7 +360,7 @@ function checkLoggedIn() {
 }
 
 function registerUser(firstName, lastName, email, password) {
-    const cardNumber = `F${generateRandomCardNumber().toString(16).toUpperCase()}`;
+    const cardNumber = generateCardNumber().toUpperCase();
     const newUser = new User(firstName, lastName, email, password, cardNumber);
     localStorage.setItem(cardNumber, JSON.stringify(newUser));
     localStorage.setItem('loggedInUser', JSON.stringify(newUser));
@@ -422,6 +428,7 @@ function updatePageState() {
     if (loggedInUser) {
 
         loggedCard.textContent = loggedInUser.cardNumber;
+        userCard.textContent = loggedInUser.cardNumber;
         loggedCard.style.fontSize = '13px';
         loggedCard.style.letterSpacing = '0.2px';
         userFirstName.textContent = loggedInUser.firstName;
@@ -497,15 +504,11 @@ function updatePageState() {
 
 // logout
 
-// logOut.addEventListener('click', () => {
-//     // Clear any user-related data from localStorage here if needed
-    
-//     // Save user info to localStorage for future logins
-//     localStorage.setItem('userInfo', JSON.stringify(loggedInUser));
-    
-//     // Reload the page to get back to the user not logged in state
-//     window.location.reload();
-// });
+logOut.addEventListener('click', () => {
+    localStorage.removeItem('loggedInUser');
+    window.location.reload(); // Reloads the page
+});
+
 
 
 
