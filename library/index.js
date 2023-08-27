@@ -227,6 +227,122 @@ linkToReg.addEventListener('click', (event) => {
     document.body.style.overflow = 'auto';
     }
 
+// registration validation
+
+const firstNameInput = document.getElementById('register-user-name');
+const lastNameInput = document.getElementById('register-user-last-name');
+const emailInput = document.getElementById('register-email');
+const passwordInput = document.getElementById('register-password');
+const signUpButton = document.getElementById('sign-up-btn');
+const nameRegex = /^[A-Za-z]+$/;
+const emailRegex = /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,4}$/;
+
+const loginUserName = document.getElementById('login-user-name');
+const loginPassword = document.getElementById('login-password');
+
+function showValidationHint(inputElement, message) {
+    inputElement.setCustomValidity(message);
+    inputElement.reportValidity();
+}
+
+function clearValidationHint(inputElement) {
+    inputElement.setCustomValidity('');
+}
+
+firstNameInput.addEventListener('input', () => {
+    if (!nameRegex.test(firstNameInput.value)) {
+        showValidationHint(firstNameInput, 'Please enter your first name.');
+    } else {
+        clearValidationHint(firstNameInput);
+    }
+});
+
+lastNameInput.addEventListener('input', () => {
+    if (!nameRegex.test(lastNameInput.value)) {
+        showValidationHint(lastNameInput, 'Please enter your last name.');
+    } else {
+        clearValidationHint(lastNameInput);
+    }
+});
+
+emailInput.addEventListener('input', () => {
+    if (!emailRegex.test(emailInput.value)) {
+        showValidationHint(emailInput, 'Please enter your email.');
+    } else {
+        clearValidationHint(emailInput);
+    }
+});
+
+passwordInput.addEventListener('input', () => {
+    if (passwordInput.value.length < 8) {
+        showValidationHint(passwordInput, 'Your password must be at least 8 characters.');
+    } else {
+        clearValidationHint(passwordInput);
+    }
+});
+
+signUpButton.addEventListener('click', () => {
+    if (!passwordInput.checkValidity()) {
+        event.preventDefault();
+        showValidationHint(passwordInput, 'Your password must be at least 8 characters.');
+    } else {
+        passwordInput.style.backgroundColor = '#fff';
+    }
+
+    if (!emailInput.checkValidity()) {
+        event.preventDefault();
+        showValidationHint(emailInput, 'Please enter your email.');
+    } else {
+        emailInput.style.backgroundColor = '#fff';
+    }
+
+    if (!lastNameInput.checkValidity()) {
+        event.preventDefault();
+        showValidationHint(lastNameInput, 'Please enter your last name.');
+    } else {
+        lastNameInput.style.backgroundColor = '#fff';
+    }
+    
+    if (!firstNameInput.checkValidity()) {
+        event.preventDefault();
+        showValidationHint(firstNameInput, 'Please enter your first name.');
+    } else {
+        firstNameInput.style.backgroundColor = '#fff';
+    }
+});
+
+loginUserName.addEventListener('input', () => {
+    if (!emailRegex.test(loginUserName.value)) {
+        showValidationHint(loginUserName, 'Please enter your email.');
+    } else {
+        clearValidationHint(loginUserName);
+    }
+});
+
+loginPassword.addEventListener('input', () => {
+    if (loginPassword.value.length < 8) {
+        showValidationHint(loginPassword, 'Your password must be at least 8 characters.');
+    } else {
+        clearValidationHint(loginPassword);
+    }
+});
+
+logInButton.addEventListener('click', () => {
+    if (!loginPassword.checkValidity()) {
+        event.preventDefault();
+        showValidationHint(loginPassword, 'Your password must be at least 8 characters.');
+    } else {
+        loginPassword.style.backgroundColor = '#fff';
+    }
+    
+    if (!loginUserName.checkValidity()) {
+        event.preventDefault();
+        showValidationHint(loginUserName, 'Please enter your email.');
+    } else {
+        loginUserName.style.backgroundColor = '#fff';
+    }
+});
+
 // slider
 
 const buttons = [
