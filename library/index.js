@@ -429,11 +429,14 @@ function updatePageState() {
         insideLetters.textContent = `${loggedInUser.firstName[0]}${loggedInUser.lastName[0]}`;
         userNameCard.textContent = `${loggedInUser.firstName} ${loggedInUser.lastName}`;
         userCardNumber.textContent = loggedInUser.cardNumber;
+        document.getElementById('input-user-name').classList.add('hidden');
+        document.getElementById('input-card-number').classList.add('hidden');
         userNameCard.style.color = '#BB945F';
         userCardNumber.style.color = '#BB945F';
         userNameCard.textContent = `${loggedInUser.firstName} ${loggedInUser.lastName}`;
         userCardNumber.textContent = loggedInUser.cardNumber;
         submitButton.classList.add('hidden');
+        blockElement.style.display = 'flex';
         submitButton.replaceWith(blockElement);
         findCard.textContent = 'Your Library card';
         findCard.style.paddingLeft = '30px';
