@@ -371,6 +371,14 @@ h1 {
   cursor: pointer;
 }
 
+#profile-close-btn {
+z-index: 5;
+}
+
+#profile-close-btn:hover {
+  cursor: pointer;
+}
+
 .close-btn span:first-child {
   transform: translateY(0) rotate(-45deg);
 }
@@ -454,6 +462,10 @@ h1 {
   margin: auto;
   background-color: #fff;
   position: relative;
+}
+
+.my-profile-modal.hidden {
+  display: none;
 }
 
 #profile-close-btn {
@@ -1303,7 +1315,7 @@ li:last-child {
   align-content: flex-start;
 }
 
-#user-name, #card-number {
+#input-user-name, #input-card-number {
   box-sizing: border-box;
   padding-left: 20px;
   width: 520px;
@@ -1316,6 +1328,43 @@ li:last-child {
   font-size: 30px;
   line-height: 50px; /* 166.667% */
   letter-spacing: 0.6px;
+}
+
+.card-inputs.hidden {
+  display: none;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 25px;
+  bottom: 90px;
+}
+
+.user-name {
+  display: flex;
+}
+
+.user-text {
+  color: #BB945F;
+  font-family: "Forum", cursive;
+  font-size: 30px;
+  line-height: 50px; /* 166.667% */
+  letter-spacing: 0.6px;
+  padding: 0;
+  padding-left: 20px;
+  padding-top: 8px;
+  margin: 0;
+  background-color: #fff;
+  width: 520px;
+  height: 66px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.user-text.hidden {
+  display: none;
 }
 
 #user-name {
@@ -1343,6 +1392,28 @@ li:last-child {
   bottom: 27px;
   left: 176px;
   cursor: pointer;
+}
+
+.submit-button.hidden {
+  display: none;
+}
+
+.block-card {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  margin: 0;
+  padding: 0; 
+  bottom: 15px;
+  gap: 35px;
+  left: 210px;
+  height: 63px;
+}
+
+.block-inside-card {
+  padding: 0;
+  margin: 0;
 }
 
 .get {
@@ -1388,6 +1459,9 @@ li:last-child {
   margin-right: 20px;
 }
 
+#profile-from-lib-card {
+  display: none;
+}
 /* Digital library cards style end */
 
 
