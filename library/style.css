@@ -1399,6 +1399,7 @@ li:last-child {
 }
 
 .block-card {
+  display: none;
   position: absolute;
   display: flex;
   flex-direction: row;
