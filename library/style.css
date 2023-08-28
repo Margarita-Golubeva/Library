@@ -499,7 +499,7 @@ z-index: 5;
   margin-left: 25px;
 }
 
-.i-lines, #login-user-name, #login-password, #register-user-name, #register-user-last-name, #register-email, #register-password {
+#login-user-name, #login-password, #register-user-name, #register-user-last-name, #register-email, #register-password {
   width: 200px;
   height: 20px;
   border: 1px solid #BB945F;
@@ -519,10 +519,20 @@ z-index: 5;
 }
 
 .i-lines {
-  padding-top: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 0;
+  width: 200px;
+  height: 20px;
+  border: 1px solid #BB945F;
+  padding: 0;
+  padding-left: 5px;
+  color: #8E8E8E;
+  font-family: Forum;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.6px;
 }
 
 #log-in-btn, #sign-up-btn {
