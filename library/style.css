@@ -350,8 +350,8 @@ h1 {
 
 .close-btn {
   position: absolute;
-  width: 15px;
-  height: 15px;
+  width: 17px;
+  height: 17px;
   top: 15px;
   right: 15px;
   background-color: #fff;
@@ -387,6 +387,103 @@ z-index: 5;
   transform: translateY(0) rotate(45deg);
 }
 
+.buy-lib-card {
+  height: 540px;
+  width: 640px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.buy-lib-card.hidden {
+  display: none;
+}
+
+.top {
+ height: 60px;
+ background-color: #0C0C0E;
+ position: relative;
+}
+
+.buy-card-header {
+  color: #FFF;
+  text-align: center;
+  font-family: Forum;
+  font-size: 40px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#buy-card-close-btn {
+  background-color: #0C0C0E;
+  color: #fff;
+}
+
+#buy-card-close-btn span {
+  background-color: #fff;
+}
+
+.bottom {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.left-card-info {
+  padding-left: 40px;
+  padding-top: 30px;
+  width: 280px;
+  position: relative;
+}
+
+.buy-card-form p {
+  margin-left: 0;
+}
+
+#buy-card-exp-month {
+  margin-right: 10px;
+}
+
+#buy-card-exp-month, #buy-card-exp-year {
+  display: inline;
+}
+
+#buy-card-exp-month, #buy-card-exp-year, #buy-card-cvc {
+ width: 45px;
+}
+
+#price {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  color: #0C0C0E;
+  font-family: Inter;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  bottom: -10px;
+  right: 52px;
+}
+
+.right-part-description {
+  width: 330px;
+  padding: 0;
+  color: #8E8E8E;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+  letter-spacing: 2px;
+  margin: 30px 30px auto auto;
+}
+
 .login-form {
   margin: 0;
   padding: 0;
@@ -402,7 +499,7 @@ z-index: 5;
   margin-left: 25px;
 }
 
-#login-user-name, #login-password, #register-user-name, #register-user-last-name, #register-email, #register-password {
+.lines, #login-user-name, #login-password, #register-user-name, #register-user-last-name, #register-email, #register-password {
   width: 200px;
   height: 20px;
   border: 1px solid #BB945F;
@@ -415,6 +512,16 @@ z-index: 5;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.6px;
+}
+
+.buy-card-lines {
+  margin-left: 30px;
+}
+
+.lines {
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #log-in-btn, #sign-up-btn {
@@ -505,7 +612,7 @@ z-index: 5;
   font-family: Inter;
   font-size: 20px;
   line-height: 20px;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .user-profile-name {
@@ -1352,6 +1459,7 @@ li:last-child {
   font-size: 30px;
   line-height: 50px; /* 166.667% */
   letter-spacing: 0.6px;
+  text-transform: capitalize;
   padding: 0;
   padding-left: 20px;
   padding-top: 8px;

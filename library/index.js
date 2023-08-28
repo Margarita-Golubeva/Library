@@ -452,6 +452,7 @@ function updatePageState() {
         registerFromLibCard.style.display = 'none';
         loginFromLibCard.style.display = 'none';
         document.getElementById('profile-from-lib-card').style.display = 'block';
+        loginModal.classList.remove('showed');
 
 
         document.getElementById('profile-from-lib-card').addEventListener('click', event => {
@@ -546,6 +547,7 @@ const profileCloseBtn = document.getElementById('profile-close-btn');
 myProfile.addEventListener('click', event => {
         event.preventDefault();
         popup.classList.add('shown');
+        loginModal.classList.remove('showed');
         myProfileModal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
     });
