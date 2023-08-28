@@ -499,7 +499,7 @@ z-index: 5;
   margin-left: 25px;
 }
 
-.lines, #login-user-name, #login-password, #register-user-name, #register-user-last-name, #register-email, #register-password {
+.i-lines, #login-user-name, #login-password, #register-user-name, #register-user-last-name, #register-email, #register-password {
   width: 200px;
   height: 20px;
   border: 1px solid #BB945F;
@@ -518,10 +518,11 @@ z-index: 5;
   margin-left: 30px;
 }
 
-.lines {
+.i-lines {
   padding-top: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-left: 0;
 }
 
 #log-in-btn, #sign-up-btn {
