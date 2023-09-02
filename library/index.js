@@ -378,6 +378,7 @@ const loggedCard = document.getElementById('loggedCard');
 const userFirstName = document.getElementById('profile-name-modal');
 const userLastName = document.getElementById('profile-last-name-modal');
 const insideLetters = document.getElementById('inside-letters');
+const insideLettersLogin = document.getElementById('inside-letters-login');
 const userCard = document.getElementById('user-card');
 const copyPic = document.getElementById('card-number-copy');
 const loggedCardElement = document.getElementById('user-card');
@@ -392,6 +393,8 @@ const submitButton = document.getElementById('submit-button-card');
 
 const blockElement = document.querySelector('.block-card');
 const findCard = document.querySelector('.find');
+
+const loginLetters = document.querySelector('.login-letters');
 
 
 copyPic.addEventListener('click', () => {
@@ -460,6 +463,10 @@ function updatePageState() {
         loginFromLibCard.style.display = 'none';
         document.getElementById('profile-from-lib-card').style.display = 'block';
         loginModal.classList.remove('showed');
+        document.querySelector('.header-log').classList.add('hidden');
+        document.querySelector('.login-letters').classList.remove('hidden');
+        insideLettersLogin.textContent = `${loggedInUser.firstName[0]}${loggedInUser.lastName[0]}`;
+        loginLetters.title = `${loggedInUser.firstName} ${loggedInUser.lastName}`;;
 
 
         document.getElementById('profile-from-lib-card').addEventListener('click', event => {
@@ -470,7 +477,7 @@ function updatePageState() {
         });
 
 
-    headerLog.addEventListener('click', () => {
+    loginLetters.addEventListener('click', () => {
         profileBeforeRegistration.classList.remove('active');
         toggleProfileCard(profileAfterRegistration);
         closeBurgerMenu(); // Close burger menu

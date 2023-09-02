@@ -139,6 +139,39 @@ h1 {
   color: #BB945F;
   transition-duration: 0.5s;
 }
+.header-log.hidden {
+  display: none;
+}
+
+.login-letters {
+  display: flex;
+  background-color: #fff;
+  height: 28px;
+  width: 28px;
+  border-radius: 28px;
+  cursor: pointer;
+  margin-right: 20px;
+  z-index: 2;
+}
+
+.login-letters.hidden {
+  display: none;
+}
+
+#inside-letters-login {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 4px;
+  color: #BB945F;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+}
 
 .dropdown {
   position: relative;
