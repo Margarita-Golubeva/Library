@@ -353,6 +353,13 @@ function generateCardNumber() {
     return hexNumber;
 }
 
+// check if the user is registered
+
+function checkLoggedIn() {
+    const registeredUser = localStorage.getItem('loggedInUser');
+    return registeredUser ? JSON.parse(registeredUser) : null;
+}
+
 // Check if the user is already logged in
 function checkLoggedIn() {
     const loggedInUser = localStorage.getItem('loggedInUser');
@@ -500,6 +507,8 @@ function updatePageState() {
     userCardNumber.classList.remove('hidden');
     userNameCard.classList.add('hidden');
     userCardNumber.classList.add('hidden');
+
+
     }
 }
 
@@ -511,6 +520,33 @@ logOut.addEventListener('click', () => {
 });
 
 
+// prevent default click in card check
+
+const submitButtonCard = document.getElementById('submit-button-card');
+const cardCheckForm = document.getElementById('card-check-form');
+
+
+cardCheckForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+});
+
+
+//     if (loggedInUser === true) {
+      
+//     } else if (loggedInUser === false && registeredUser === true) {
+//       userNameCard.classList.remove('hidden');
+//       userCardNumber.classList.remove('hidden');
+  
+//       setTimeout(() => {
+//         userNameCard.classList.add('hidden');
+//         userCardNumber.classList.add('hidden');
+//       }, 10000);
+//     } else {
+
+//         alert('button is clicked')
+//     }
+//   });
+  
 
 
 // Handle registration form submission
