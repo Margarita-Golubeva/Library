@@ -89,25 +89,25 @@
                     <div class="left-card-info">
     
                         <div class="modal-input-lines" id="buy-card-lines">
-                            <form action="/" class="buy-card-form">
+                            <form action="/" class="buy-card-form" id="buy-card-form">
                                 <div class="login-lines">
                                 <p class="inside-lines">Bank card number</p>
                                 <label for="buy-card-number"></label>
-                                <input type="text" class="i-lines" id="buy-card-number" name="buy-card-number" required>
+                                <input type="text" class="i-lines" id="buy-card-number" name="buy-card-number" maxlength="16" minlength="16" required>
                                 <p class="inside-lines">Expiration code</p>
                                 <label for="buy-card-exp-month"></label>
-                                <input type="text" class="i-lines" id="buy-card-exp-month" name="buy-card-exp-month" required>
+                                <input type="text" class="i-lines" id="buy-card-exp-month" name="buy-card-exp-month" maxlength="2" minlength="2" required>
                                 <label for="buy-card-exp-year"></label>
-                                <input type="text" class="i-lines" id="buy-card-exp-year" name="buy-card-exp-year" required>
+                                <input type="text" class="i-lines" id="buy-card-exp-year" name="buy-card-exp-year" maxlength="2" minlength="2" required>
                                 <p class="inside-lines">CVC</p>
                                 <label for="buy-card-cvc"></label>
-                                <input type="password" class="i-lines" id="buy-card-cvc" name="buy-card-cvc" required>
-                                <p class="inside-lines">Cardholder name</p>
+                                <input type="password" class="i-lines" id="buy-card-cvc" name="buy-card-cvc" maxlength="3" minlength="3" required>
+                                <p class="inside-lines" id="cardholder-name">Cardholder name</p>
                                 <label for="buy-card-name"></label>
                                 <input type="text" class="i-lines" id="buy-card-name" name="buy-card-name" required>
                                 <p class="inside-lines">Postal code</p>
                                 <label for="buy-card-code"></label>
-                                <input type="text" class="i-lines" id="buy-card-code" name="buy-card-code" required>
+                                <input type="text" class="i-lines" id="buy-card-code" name="buy-card-code" maxlength="6" minlength="6" required>
                                 <p class="inside-lines">City / Town</p>
                                 <label for="buy-card-city"></label>
                                 <input type="text" class="i-lines" id="buy-card-city" name="buy-card-city" required>
@@ -210,7 +210,7 @@
                     <div class="bonuses">
                         <div class="block-inside"><p class="block-inside">Bonuses</p></div>
                         <div class="block-inside"><img class="block-inside" src="star.svg" alt="star logo" height="21" width="20"></div>
-                        <div class="block-inside"><p class="block-inside counter">0</p></div>
+                        <div class="block-inside"><p class="block-inside counter">1240</p></div>
                     </div>
                     <div class="books">
                         <div class="block-inside"><p class="block-inside">Books</p></div>
@@ -545,7 +545,7 @@
                                     <div class="bonuses">
                                         <div class="block-inside-card"><p class="block-inside-card">Bonuses</p></div>
                                         <div class="block-inside-card"><img class="block-inside-card" src="star.svg" alt="star logo" height="21" width="20"></div>
-                                        <div class="block-inside-card"><p class="block-inside-card counter">0</p></div>
+                                        <div class="block-inside-card"><p class="block-inside-card counter">1240</p></div>
                                     </div>
                                     <div class="books">
                                         <div class="block-inside-card"><p class="block-inside-card">Books</p></div>

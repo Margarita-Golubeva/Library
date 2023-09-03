@@ -362,14 +362,11 @@ function checkLoggedIn() {
 }
 
 // Check if the user is already logged in
+
 function checkLoggedIn() {
     const loggedInUser = localStorage.getItem('loggedInUser');
     return loggedInUser ? JSON.parse(loggedInUser) : null;
 }
-
-// create user
-
-
 
 function registerUser(firstName, lastName, email, password) {
     const cardNumber = generateCardNumber().toUpperCase();
@@ -438,6 +435,81 @@ function updatePageState() {
     }
 }
 
+
+
+// buy card validation
+
+const bankCardNumber = document.getElementById('buy-card-number');
+const bankCardExpirationMonth = document.getElementById('buy-card-exp-month');
+const bankCardExpirationYear = document.getElementById('buy-card-exp-year');
+const bankCardCvc = document.getElementById('buy-card-cvc');
+const bankCardName = document.getElementById('buy-card-name');
+const bankCardPostCode = document.getElementById('buy-card-code');
+const bankCardCity = document.getElementById('buy-card-city');
+const buyCardButton = document.getElementById('card-buy-btn');
+const cardNumberRegex = /^[0-9]+$/;
+const cardNameRegex = /^[A-Za-z ]+$/;
+const monthRegex = /^(0[1-9]|1[0-2])$/;
+const yearRegex = /^(2[3-9]|3[0-5])$/;
+
+bankCardNumber.addEventListener('input', () => {
+    if (!cardNumberRegex.test(bankCardNumber.value)) {
+        showValidationHint(bankCardNumber, 'Please enter your card number.');
+    } else {
+        clearValidationHint(bankCardNumber);
+    }
+});
+
+bankCardExpirationMonth.addEventListener('input', () => {
+    if (!monthRegex.test(bankCardExpirationMonth.value)) {
+        showValidationHint(bankCardExpirationMonth, 'Please enter valid card expiration month.');
+    } else {
+        clearValidationHint(bankCardExpirationMonth);
+    }
+});
+
+bankCardExpirationYear.addEventListener('input', () => {
+    if (!yearRegex.test(bankCardExpirationYear.value)) {
+        showValidationHint(bankCardExpirationYear, 'Please enter valid card expiration year.');
+    } else {
+        clearValidationHint(bankCardExpirationYear);
+    }
+});
+
+bankCardCvc.addEventListener('input', () => {
+    if (!cardNumberRegex.test(bankCardCvc.value)) {
+        showValidationHint(bankCardCvc, 'Please enter valid card CVC.');
+    } else {
+        clearValidationHint(bankCardCvc);
+    }
+});
+
+bankCardName.addEventListener('input', () => {
+    if (!cardNameRegex.test(bankCardName.value)) {
+        showValidationHint(bankCardName, 'Please enter cardholder\'s name.');
+    } else {
+        clearValidationHint(bankCardName);
+    }
+});
+
+bankCardPostCode.addEventListener('input', () => {
+    if (!cardNumberRegex.test(bankCardPostCode.value)) {
+        showValidationHint(bankCardPostCode, 'Please enter your postcode.');
+    } else {
+        clearValidationHint(bankCardPostCode);
+    }
+});
+
+bankCardCity.addEventListener('input', () => {
+    if (!cardNameRegex.test(bankCardCity.value)) {
+        showValidationHint(bankCardCity, 'Please enter your city.');
+    } else {
+        clearValidationHint(bankCardCity);
+    }
+});
+
+const buyLibCard = document.querySelector('.buy-lib-card');
+
 function updatePageState() {
     const loggedInUser = checkLoggedIn();
     if (loggedInUser) {
@@ -473,6 +545,46 @@ function updatePageState() {
         insideLettersLogin.textContent = `${loggedInUser.firstName[0]}${loggedInUser.lastName[0]}`;
         loginLetters.title = `${loggedInUser.firstName} ${loggedInUser.lastName}`;;
 
+        // buy card 
+
+        const buyCardForm = document.getElementById('buy-card-form');
+
+        let buyCardFormSubmitted = false;
+
+        buyCardForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            loginModal.classList.remove('showed');
+            buyLibCard.classList.add('hidden');
+            popup.classList.remove('shown');
+            document.body.style.overflow = 'auto';
+            buyCardFormSubmitted = true;
+        });
+
+        buyButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (buyCardFormSubmitted) {     
+                    event.preventDefault();
+                    button.classList.add('hidden');
+                    popup.classList.remove('shown');
+                    loginModal.classList.remove('showed');
+                    buyLibCard.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                } else if (!buyCardFormSubmitted) {
+                    event.preventDefault();
+                    loginModal.classList.remove('showed');
+                    buyLibCard.classList.remove('hidden');
+                };
+            });
+        });
+
+       const buyLibCardCloseBtn = document.getElementById('buy-card-close-btn');
+
+        buyLibCardCloseBtn.addEventListener('click', () => {
+            buyLibCard.classList.add('hidden');
+            popup.classList.remove('shown');
+            document.body.style.overflow = 'auto';
+        })
 
         document.getElementById('profile-from-lib-card').addEventListener('click', event => {
             event.preventDefault();
@@ -511,31 +623,26 @@ function updatePageState() {
         profileAfterRegistration.classList.remove('active');
     });
 
-
         // User is logged in
         
     } else {
 
     userNameCard.classList.add('hidden');
     userCardNumber.classList.add('hidden');
-
-
     }
 }
-
-// registered user
-
-const registeredUser = localStorage.getItem('loggedInUser');
-
-
 
 // logout
 
 logOut.addEventListener('click', () => {
-    localStorage.removeItem('loggedInUser');
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    if (loggedInUser) {
+        const user = JSON.parse(loggedInUser);
+        localStorage.setItem(user.cardNumber, loggedInUser);
+        localStorage.removeItem('loggedInUser');
+    }
     window.location.reload();
 });
-
 
 // prevent default click in card check
 
@@ -546,25 +653,6 @@ const cardCheckForm = document.getElementById('card-check-form');
 cardCheckForm.addEventListener('submit', (event) => {
     event.preventDefault();
 });
-
-
-//     if (loggedInUser === true) {
-      
-//     } else if (loggedInUser === false && registeredUser === true) {
-//       userNameCard.classList.remove('hidden');
-//       userCardNumber.classList.remove('hidden');
-  
-//       setTimeout(() => {
-//         userNameCard.classList.add('hidden');
-//         userCardNumber.classList.add('hidden');
-//       }, 10000);
-//     } else {
-
-//         alert('button is clicked')
-//     }
-//   });
-  
-
 
 // Handle registration form submission
 signUpButton.addEventListener('click', (event) => {

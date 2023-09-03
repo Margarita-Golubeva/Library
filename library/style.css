@@ -478,7 +478,7 @@ z-index: 5;
 }
 
 #buy-card-exp-month {
-  margin-right: 10px;
+  margin-right: 4px;
 }
 
 #buy-card-exp-month, #buy-card-exp-year {
@@ -487,6 +487,10 @@ z-index: 5;
 
 #buy-card-exp-month, #buy-card-exp-year, #buy-card-cvc {
  width: 45px;
+}
+
+#cardholder-name {
+  margin-top: 10px;
 }
 
 #price {
@@ -551,14 +555,12 @@ z-index: 5;
 }
 
 .i-lines {
-  margin-top: 10px;
-  margin-bottom: 10px;
   margin-left: 0;
+  padding: 0;
+  padding-left: 5px;
   width: 200px;
   height: 20px;
   border: 1px solid #BB945F;
-  padding: 0;
-  padding-left: 5px;
   color: #8E8E8E;
   font-family: Forum;
   font-size: 12px;
@@ -1125,6 +1127,10 @@ input:checked ~ span {
   bottom: 15px;
   left: 20px;
   cursor: pointer;
+}
+
+.buy-button.hidden {
+  display: none;
 }
 
 .buy-button:hover, .signlog-button:hover, .submit-button:hover {
