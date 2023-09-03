@@ -7,7 +7,7 @@ const profileBeforeRegistration = document.querySelector('.profile-before-regist
 
 headerLog.addEventListener('click', () => {
     toggleProfileCard(profileBeforeRegistration);
-    closeBurgerMenu(); // Close burger menu
+    closeBurgerMenu();
     event.stopPropagation(); // Prevent the click from propagating further
 });
 
@@ -109,7 +109,7 @@ document.body.addEventListener('click', event => {
 
     // Close the modal when submitting the login form
     loginForm.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault();
         // Here code to check localStorage for email/card and password
         closeLoginModal();
     });
@@ -341,7 +341,7 @@ class User {
         this.password = password;
         this.cardNumber = cardNumber;
     }
-}
+};
 
 function generateCardNumber() {
     const hexChars = '0123456789ABCDEF';
@@ -351,9 +351,18 @@ function generateCardNumber() {
         hexNumber += hexChars.charAt(randomIndex);
     }
     return hexNumber;
+};
+
+
+// check if the user is registered
+
+function checkLoggedIn() {
+    const registeredUser = localStorage.getItem('loggedInUser');
+    return registeredUser ? JSON.parse(registeredUser) : null;
 }
 
 // Check if the user is already logged in
+
 function checkLoggedIn() {
     const loggedInUser = localStorage.getItem('loggedInUser');
     return loggedInUser ? JSON.parse(loggedInUser) : null;
@@ -371,6 +380,7 @@ const loggedCard = document.getElementById('loggedCard');
 const userFirstName = document.getElementById('profile-name-modal');
 const userLastName = document.getElementById('profile-last-name-modal');
 const insideLetters = document.getElementById('inside-letters');
+const insideLettersLogin = document.getElementById('inside-letters-login');
 const userCard = document.getElementById('user-card');
 const copyPic = document.getElementById('card-number-copy');
 const loggedCardElement = document.getElementById('user-card');
@@ -385,6 +395,8 @@ const submitButton = document.getElementById('submit-button-card');
 
 const blockElement = document.querySelector('.block-card');
 const findCard = document.querySelector('.find');
+
+const loginLetters = document.querySelector('.login-letters');
 
 
 copyPic.addEventListener('click', () => {
@@ -423,6 +435,80 @@ function updatePageState() {
     }
 }
 
+
+
+// buy card validation
+
+const bankCardNumber = document.getElementById('buy-card-number');
+const bankCardExpirationMonth = document.getElementById('buy-card-exp-month');
+const bankCardExpirationYear = document.getElementById('buy-card-exp-year');
+const bankCardCvc = document.getElementById('buy-card-cvc');
+const bankCardName = document.getElementById('buy-card-name');
+const bankCardPostCode = document.getElementById('buy-card-code');
+const bankCardCity = document.getElementById('buy-card-city');
+const cardNumberRegex = /^[0-9]+$/;
+const cardNameRegex = /^[A-Za-z ]+$/;
+const monthRegex = /^(0[1-9]|1[0-2])$/;
+const yearRegex = /^(2[3-9]|3[0-5])$/;
+
+bankCardNumber.addEventListener('input', () => {
+    if (!cardNumberRegex.test(bankCardNumber.value)) {
+        showValidationHint(bankCardNumber, 'Please enter your card number.');
+    } else {
+        clearValidationHint(bankCardNumber);
+    }
+});
+
+bankCardExpirationMonth.addEventListener('input', () => {
+    if (!monthRegex.test(bankCardExpirationMonth.value)) {
+        showValidationHint(bankCardExpirationMonth, 'Please enter valid card expiration month.');
+    } else {
+        clearValidationHint(bankCardExpirationMonth);
+    }
+});
+
+bankCardExpirationYear.addEventListener('input', () => {
+    if (!yearRegex.test(bankCardExpirationYear.value)) {
+        showValidationHint(bankCardExpirationYear, 'Please enter valid card expiration year.');
+    } else {
+        clearValidationHint(bankCardExpirationYear);
+    }
+});
+
+bankCardCvc.addEventListener('input', () => {
+    if (!cardNumberRegex.test(bankCardCvc.value)) {
+        showValidationHint(bankCardCvc, 'Please enter valid card CVC.');
+    } else {
+        clearValidationHint(bankCardCvc);
+    }
+});
+
+bankCardName.addEventListener('input', () => {
+    if (!cardNameRegex.test(bankCardName.value)) {
+        showValidationHint(bankCardName, 'Please enter cardholder\'s name.');
+    } else {
+        clearValidationHint(bankCardName);
+    }
+});
+
+bankCardPostCode.addEventListener('input', () => {
+    if (!cardNumberRegex.test(bankCardPostCode.value)) {
+        showValidationHint(bankCardPostCode, 'Please enter your postcode.');
+    } else {
+        clearValidationHint(bankCardPostCode);
+    }
+});
+
+bankCardCity.addEventListener('input', () => {
+    if (!cardNameRegex.test(bankCardCity.value)) {
+        showValidationHint(bankCardCity, 'Please enter your city.');
+    } else {
+        clearValidationHint(bankCardCity);
+    }
+});
+
+const buyLibCard = document.querySelector('.buy-lib-card');
+
 function updatePageState() {
     const loggedInUser = checkLoggedIn();
     if (loggedInUser) {
@@ -452,21 +538,70 @@ function updatePageState() {
         registerFromLibCard.style.display = 'none';
         loginFromLibCard.style.display = 'none';
         document.getElementById('profile-from-lib-card').style.display = 'block';
+        loginModal.classList.remove('showed');
+        document.querySelector('.header-log').classList.add('hidden');
+        document.querySelector('.login-letters').classList.remove('hidden');
+        insideLettersLogin.textContent = `${loggedInUser.firstName[0]}${loggedInUser.lastName[0]}`;
+        loginLetters.title = `${loggedInUser.firstName} ${loggedInUser.lastName}`;;
 
+        // buy card 
+
+        const buyCardForm = document.getElementById('buy-card-form');
+
+        let buyCardFormSubmitted = false;
+
+        buyCardForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            loginModal.classList.remove('showed');
+            buyLibCard.classList.add('hidden');
+            popup.classList.remove('shown');
+            myProfileModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            buyCardFormSubmitted = true;
+        });
+
+        buyButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (buyCardFormSubmitted) {     
+                    event.preventDefault();
+                    button.classList.add('hidden');
+                    popup.classList.remove('shown');
+                    myProfileModal.classList.add('hidden');
+                    loginModal.classList.remove('showed');
+                    buyLibCard.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                } else if (!buyCardFormSubmitted) {
+                    event.preventDefault();
+                    loginModal.classList.remove('showed');
+                    buyLibCard.classList.remove('hidden');
+                    myProfileModal.classList.add('hidden');
+                };
+            });
+        });
+
+       const buyLibCardCloseBtn = document.getElementById('buy-card-close-btn');
+
+        buyLibCardCloseBtn.addEventListener('click', () => {
+            buyLibCard.classList.add('hidden');
+            popup.classList.remove('shown');
+            document.body.style.overflow = 'auto';
+        })
 
         document.getElementById('profile-from-lib-card').addEventListener('click', event => {
             event.preventDefault();
             popup.classList.add('shown');
             myProfileModal.classList.remove('hidden');
+            buyLibCard.classList.add('hidden');
             document.body.style.overflow = 'hidden';
         });
 
 
-    headerLog.addEventListener('click', () => {
+    loginLetters.addEventListener('click', () => {
         profileBeforeRegistration.classList.remove('active');
         toggleProfileCard(profileAfterRegistration);
-        closeBurgerMenu(); // Close burger menu
-        event.stopPropagation(); // Prevent the click from propagating further
+        closeBurgerMenu();
+        event.stopPropagation();
     });
 
     // Close profile card when clicking outside of it
@@ -491,12 +626,10 @@ function updatePageState() {
         profileAfterRegistration.classList.remove('active');
     });
 
-
         // User is logged in
         
     } else {
-    userNameCard.classList.remove('hidden');
-    userCardNumber.classList.remove('hidden');
+
     userNameCard.classList.add('hidden');
     userCardNumber.classList.add('hidden');
     }
@@ -505,12 +638,22 @@ function updatePageState() {
 // logout
 
 logOut.addEventListener('click', () => {
-    localStorage.removeItem('loggedInUser');
-    window.location.reload(); // Reloads the page
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    if (loggedInUser) {
+        const user = JSON.parse(loggedInUser);
+        localStorage.setItem(user.cardNumber, loggedInUser);
+        localStorage.removeItem('loggedInUser');
+    }
+    window.location.reload();
 });
 
+// prevent default click in card check
 
+const cardCheckForm = document.getElementById('card-check-form');
 
+cardCheckForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+});
 
 // Handle registration form submission
 signUpButton.addEventListener('click', (event) => {
@@ -521,9 +664,9 @@ signUpButton.addEventListener('click', (event) => {
     const password = document.getElementById('register-password').value;
     
     registerUser(firstName, lastName, email, password);
-    registerModal.style.display = 'none'; // Close the registration modal
+    registerModal.style.display = 'none';
     updatePageState();
-    location.reload(); // Reload the page after registration
+    location.reload();
 });
 
 // Handle switching between states
@@ -546,6 +689,7 @@ const profileCloseBtn = document.getElementById('profile-close-btn');
 myProfile.addEventListener('click', event => {
         event.preventDefault();
         popup.classList.add('shown');
+        loginModal.classList.remove('showed');
         myProfileModal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
     });
@@ -557,7 +701,7 @@ profileCloseBtn.addEventListener('click', () => {
     myProfileModal.classList.add('hidden');
     document.body.style.overflow = 'auto';
     });
-    
+
 
 });
 

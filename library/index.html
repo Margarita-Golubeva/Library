@@ -47,6 +47,9 @@
                 <div class="header-log">
                     <img class="login" src="profile.svg" alt="login" style="width: 28px; height: 28px;">
                 </div>
+                <div class="login-letters hidden">
+                        <div class="inside-letters-login" id="inside-letters-login">NS</div>
+                </div>
                 <div class="profile-before-registration" id="profile-before-registration">
                     <h3 class="profile-name">Profile</h3>
                     <a href="#" id="login-link">Log In</a>
@@ -73,6 +76,56 @@
         </div>
         </section>
         <div class="popup">
+
+            <div class="buy-lib-card hidden">
+                <div class="top">
+                    <div><p class="buy-card-header">Buy a library card</p></div>
+                    <button class="close-btn" id="buy-card-close-btn">
+                        <span></span><span></span>
+                    </button>
+                </div>
+    
+                <div class="bottom">
+                    <div class="left-card-info">
+    
+                        <div class="modal-input-lines" id="buy-card-lines">
+                            <form action="/" class="buy-card-form" id="buy-card-form">
+                                <div class="login-lines">
+                                <p class="inside-lines">Bank card number</p>
+                                <label for="buy-card-number"></label>
+                                <input type="text" class="i-lines" id="buy-card-number" name="buy-card-number" maxlength="16" minlength="16" required>
+                                <p class="inside-lines">Expiration code</p>
+                                <label for="buy-card-exp-month"></label>
+                                <input type="text" class="i-lines" id="buy-card-exp-month" name="buy-card-exp-month" maxlength="2" minlength="2" required>
+                                <label for="buy-card-exp-year"></label>
+                                <input type="text" class="i-lines" id="buy-card-exp-year" name="buy-card-exp-year" maxlength="2" minlength="2" required>
+                                <p class="inside-lines">CVC</p>
+                                <label for="buy-card-cvc"></label>
+                                <input type="password" class="i-lines" id="buy-card-cvc" name="buy-card-cvc" maxlength="3" minlength="3" required>
+                                <p class="inside-lines" id="cardholder-name">Cardholder name</p>
+                                <label for="buy-card-name"></label>
+                                <input type="text" class="i-lines" id="buy-card-name" name="buy-card-name" required>
+                                <p class="inside-lines">Postal code</p>
+                                <label for="buy-card-code"></label>
+                                <input type="text" class="i-lines" id="buy-card-code" name="buy-card-code" maxlength="6" minlength="6" required>
+                                <p class="inside-lines">City / Town</p>
+                                <label for="buy-card-city"></label>
+                                <input type="text" class="i-lines" id="buy-card-city" name="buy-card-city" required>
+                                </div>
+                                <input class="signlog-button" type="submit" value="Buy" id="card-buy-btn">
+                                <div><p id="price">$ 25.00</p></div>
+                            </form>
+                            
+                        </div>
+                    </div>
+                    <div class="right-description">
+                        <p class="right-part-description">If you are live, work, attend school, or pay property taxes in New York State, you can get a $25 digital library card right now using this online form. Visitors to New York State can also use this form to apply for a temporary card.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+
         <div class="login-modal">
             <p class="login-title">LOGIN</p>
             <button class="close-btn" id="login-close-btn">
@@ -152,17 +205,17 @@
                     <div class="visits">
                         <div class="block-inside"><p class="block-inside">Visits</p></div>
                         <div class="block-inside"><img class="block-inside" src="union.svg" alt="user logo" height="21" width="20"></div>
-                        <div class="block-inside"><p class="block-inside counter">0</p></div>
+                        <div class="block-inside"><p class="block-inside counter" id="visit-counter">0</p></div>
                     </div>
                     <div class="bonuses">
                         <div class="block-inside"><p class="block-inside">Bonuses</p></div>
                         <div class="block-inside"><img class="block-inside" src="star.svg" alt="star logo" height="21" width="20"></div>
-                        <div class="block-inside"><p class="block-inside counter">0</p></div>
+                        <div class="block-inside"><p class="block-inside counter">1240</p></div>
                     </div>
                     <div class="books">
                         <div class="block-inside"><p class="block-inside">Books</p></div>
                         <div class="block-inside"><img class="block-inside" src="book.svg" alt="book logo" height="21" width="20"></div>
-                        <div class="block-inside"><p class="block-inside counter">0</p></div>
+                        <div class="block-inside"><p class="block-inside counter" id="books-counter">0</p></div>
                     </div>
                 </div>
 
@@ -475,7 +528,7 @@
                     <div class="find-card">
                         <div class="input-lines">
                             <p class="bpl-card">Brooklyn Public Library</p>
-                            <form action="/" class="card-form">
+                            <form action="/" class="card-form" id="card-check-form">
                                 <div class="lines">
                                     <label for="user-name"></label>
                                     <input type="text" id="input-user-name" class="card-inputs" name="user-name" placeholder="Reader's name"><br><br>
@@ -487,17 +540,17 @@
                                     <div class="visits">
                                         <div class="block-inside-card"><p class="block-inside-card">Visits</p></div>
                                         <div class="block-inside-card"><img class="block-inside-card" src="union.svg" alt="user logo" height="21" width="20"></div>
-                                        <div class="block-inside-card"><p class="block-inside-card counter">0</p></div>
+                                        <div class="block-inside-card"><p class="block-inside-card counter" id="visit-counter-card">0</p></div>
                                     </div>
                                     <div class="bonuses">
                                         <div class="block-inside-card"><p class="block-inside-card">Bonuses</p></div>
                                         <div class="block-inside-card"><img class="block-inside-card" src="star.svg" alt="star logo" height="21" width="20"></div>
-                                        <div class="block-inside-card"><p class="block-inside-card counter">0</p></div>
+                                        <div class="block-inside-card"><p class="block-inside-card counter">1240</p></div>
                                     </div>
                                     <div class="books">
                                         <div class="block-inside-card"><p class="block-inside-card">Books</p></div>
                                         <div class="block-inside-card"><img class="block-inside-card" src="book.svg" alt="book logo" height="21" width="20"></div>
-                                        <div class="block-inside-card"><p class="block-inside-card counter">0</p></div>
+                                        <div class="block-inside-card"><p class="block-inside-card counter" id="books-counter-card">0</p></div>
                                     </div>
                                 </div>
                             </form>
