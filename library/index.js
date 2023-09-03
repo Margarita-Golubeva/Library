@@ -7,7 +7,7 @@ const profileBeforeRegistration = document.querySelector('.profile-before-regist
 
 headerLog.addEventListener('click', () => {
     toggleProfileCard(profileBeforeRegistration);
-    closeBurgerMenu(); // Close burger menu
+    closeBurgerMenu();
     event.stopPropagation(); // Prevent the click from propagating further
 });
 
@@ -109,7 +109,7 @@ document.body.addEventListener('click', event => {
 
     // Close the modal when submitting the login form
     loginForm.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault();
         // Here code to check localStorage for email/card and password
         closeLoginModal();
     });
@@ -341,7 +341,7 @@ class User {
         this.password = password;
         this.cardNumber = cardNumber;
     }
-}
+};
 
 function generateCardNumber() {
     const hexChars = '0123456789ABCDEF';
@@ -351,7 +351,8 @@ function generateCardNumber() {
         hexNumber += hexChars.charAt(randomIndex);
     }
     return hexNumber;
-}
+};
+
 
 // check if the user is registered
 
@@ -365,6 +366,10 @@ function checkLoggedIn() {
     const loggedInUser = localStorage.getItem('loggedInUser');
     return loggedInUser ? JSON.parse(loggedInUser) : null;
 }
+
+// create user
+
+
 
 function registerUser(firstName, lastName, email, password) {
     const cardNumber = generateCardNumber().toUpperCase();
@@ -480,8 +485,8 @@ function updatePageState() {
     loginLetters.addEventListener('click', () => {
         profileBeforeRegistration.classList.remove('active');
         toggleProfileCard(profileAfterRegistration);
-        closeBurgerMenu(); // Close burger menu
-        event.stopPropagation(); // Prevent the click from propagating further
+        closeBurgerMenu();
+        event.stopPropagation();
     });
 
     // Close profile card when clicking outside of it
@@ -510,8 +515,7 @@ function updatePageState() {
         // User is logged in
         
     } else {
-    userNameCard.classList.remove('hidden');
-    userCardNumber.classList.remove('hidden');
+
     userNameCard.classList.add('hidden');
     userCardNumber.classList.add('hidden');
 
@@ -519,11 +523,17 @@ function updatePageState() {
     }
 }
 
+// registered user
+
+const registeredUser = localStorage.getItem('loggedInUser');
+
+
+
 // logout
 
 logOut.addEventListener('click', () => {
     localStorage.removeItem('loggedInUser');
-    window.location.reload(); // Reloads the page
+    window.location.reload();
 });
 
 
@@ -565,9 +575,9 @@ signUpButton.addEventListener('click', (event) => {
     const password = document.getElementById('register-password').value;
     
     registerUser(firstName, lastName, email, password);
-    registerModal.style.display = 'none'; // Close the registration modal
+    registerModal.style.display = 'none';
     updatePageState();
-    location.reload(); // Reload the page after registration
+    location.reload();
 });
 
 // Handle switching between states
