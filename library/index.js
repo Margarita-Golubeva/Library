@@ -649,9 +649,7 @@ logOut.addEventListener('click', () => {
 
 // prevent default click in card check
 
-const submitButtonCard = document.getElementById('submit-button-card');
 const cardCheckForm = document.getElementById('card-check-form');
-
 
 cardCheckForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -703,7 +701,7 @@ profileCloseBtn.addEventListener('click', () => {
     myProfileModal.classList.add('hidden');
     document.body.style.overflow = 'auto';
     });
-    
+
 
 });
 
