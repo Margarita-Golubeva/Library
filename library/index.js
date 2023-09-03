@@ -446,7 +446,6 @@ const bankCardCvc = document.getElementById('buy-card-cvc');
 const bankCardName = document.getElementById('buy-card-name');
 const bankCardPostCode = document.getElementById('buy-card-code');
 const bankCardCity = document.getElementById('buy-card-city');
-const buyCardButton = document.getElementById('card-buy-btn');
 const cardNumberRegex = /^[0-9]+$/;
 const cardNameRegex = /^[A-Za-z ]+$/;
 const monthRegex = /^(0[1-9]|1[0-2])$/;
@@ -556,6 +555,7 @@ function updatePageState() {
             loginModal.classList.remove('showed');
             buyLibCard.classList.add('hidden');
             popup.classList.remove('shown');
+            myProfileModal.classList.add('hidden');
             document.body.style.overflow = 'auto';
             buyCardFormSubmitted = true;
         });
@@ -567,6 +567,7 @@ function updatePageState() {
                     event.preventDefault();
                     button.classList.add('hidden');
                     popup.classList.remove('shown');
+                    myProfileModal.classList.add('hidden');
                     loginModal.classList.remove('showed');
                     buyLibCard.classList.add('hidden');
                     document.body.style.overflow = 'auto';
@@ -574,6 +575,7 @@ function updatePageState() {
                     event.preventDefault();
                     loginModal.classList.remove('showed');
                     buyLibCard.classList.remove('hidden');
+                    myProfileModal.classList.add('hidden');
                 };
             });
         });
@@ -590,6 +592,7 @@ function updatePageState() {
             event.preventDefault();
             popup.classList.add('shown');
             myProfileModal.classList.remove('hidden');
+            buyLibCard.classList.add('hidden');
             document.body.style.overflow = 'hidden';
         });
 
