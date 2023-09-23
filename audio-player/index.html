@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Audio Player</title>
+</head>
+<body>
+    <div class="audio-player">
+        <div id="background-video">
+            <video id="videoClip" autoplay muted>
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div id="audio-controls">
+            <audio id="myAudio">
+                <source src="song1.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="song-info">
+            <div class="song-details">
+                <h2>Song Title 1</h2>
+                <p>Artist Name 1</p>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="prevBtn">Previous</button>
+            <button id="playPauseBtn">Play</button>
+            <button id="nextBtn">Next</button>
+        </div>
+        <div class="progress">
+            <input id="progressBar" type="range" min="0" max="100" step="0.1">
+            <div class="time">
+                <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Margarita G.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
