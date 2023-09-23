@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentSong = 0;
     const songs = ["song1.mp3", "song2.mp3", "song3.mp3", "song4.mp3", "song5.mp3", "song6.mp3"];
     const videoClips = ["video1.mp4", "video2.mp4", "video3.mp4", "video4.mp4", "video5.mp4", "video6.mp4"];
-    const titles = ["Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6"];
-    const artists = ["Name 1", "Name 2", "Name 3", "Name 4", "Name 5", "Name 6"];
+    const titles = ["Unknown (To You)", "Dream On", "Who Can You Trust", "Enemy", "Better", "Venom"];
+    const artists = ["Jacob Banks", "Blacktop Mojo", "Ivy Levan", "Imagine Dragons", "Plumb", "Eminem"];
 
     // play/pause button
     playPauseBtn.addEventListener('click', function () {
@@ -52,6 +52,12 @@ document.addEventListener('DOMContentLoaded', function () {
         videoClip.poster = `cover${currentSong + 1}.jpg`;
     }
 
-    
+    // update current time and progress bar
+    audio.addEventListener('timeupdate', function () {
+        currentTime.innerText = formatTime(audio.currentTime);
+        progressBar.value = (audio.currentTime / audio.duration) * 100;
+    });
+
+
 
 });
