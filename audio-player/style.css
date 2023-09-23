@@ -117,3 +117,23 @@ footer a {
 footer a:hover {
     color: #909090;
 }
+
+@media screen and (max-width: 1200px) {
+
+    .audio-player {
+        height: 100vh;
+    }
+
+    .controls {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+    }
+    .controls button {
+        width: 50%;
+        font-size: 100%;
+        margin: 5px;
+    }
+
+}
