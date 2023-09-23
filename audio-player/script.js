@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
         progressBar.value = (audio.currentTime / audio.duration) * 100;
     });
 
-
     // update duration when audio is loaded
     audio.addEventListener('loadedmetadata', function () {
         duration.innerText = formatTime(audio.duration);
@@ -82,5 +81,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     };
 
+    // time format
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = Math.floor(seconds % 60);
+        return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+    }
+
+    // play next song when the current song ends
+    audio.addEventListener('ended', function () {
+        currentSong = (currentSong + 1) % songs.length;
+        updateMedia();
+    });
+
+    // initialize the media with the first song
+    updateMedia();
 
 });
