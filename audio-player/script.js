@@ -40,6 +40,18 @@ document.addEventListener('DOMContentLoaded', function () {
         updateMedia();
     });
 
+    // update media (audio and video)
+    function updateMedia() {
+        audio.src = songs[currentSong];
+        videoClip.src = videoClips[currentSong];
+        audio.play();
+        videoClip.play();
+        playPauseBtn.innerText = 'Pause';
+        document.querySelector('.song-details h2').innerText = titles[currentSong];
+        document.querySelector('.song-details p').innerText = artists[currentSong];
+        videoClip.poster = `cover${currentSong + 1}.jpg`;
+    }
+
     
 
 });
