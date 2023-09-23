@@ -58,6 +58,18 @@ document.addEventListener('DOMContentLoaded', function () {
         progressBar.value = (audio.currentTime / audio.duration) * 100;
     });
 
+    // keyboard arrows
+    function handleKeyPress(event) {
+        if (event.keyCode === 39) {
+            audio.currentTime += 5;
+        } else if (event.keyCode === 37) {
+            audio.currentTime -= 5;
+        }
+    };
+
+    // listen for keyboard
+    window.addEventListener('keydown', handleKeyPress);
+
     // update duration when audio is loaded
     audio.addEventListener('loadedmetadata', function () {
         duration.innerText = formatTime(audio.duration);
@@ -96,5 +108,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // initialize the media with the first song
     updateMedia();
-
+ 
 });

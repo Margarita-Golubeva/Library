@@ -94,10 +94,19 @@ video {
 }
 
 footer {
-    text-align: center;
     padding: 10px;
     background-color: #272525;
     color: #fff;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.github-link {
+    display: flex;
+    align-self: center;
 }
 
 footer a {
@@ -106,5 +115,5 @@ footer a {
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #909090;
 }
