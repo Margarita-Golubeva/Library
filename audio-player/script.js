@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
         playPauseBtn.innerText = 'Pause';
         document.querySelector('.song-details h2').innerText = titles[currentSong];
         document.querySelector('.song-details p').innerText = artists[currentSong];
-        videoClip.poster = `cover${currentSong + 1}.jpg`;
     }
 
     // update current time and progress bar
@@ -71,15 +70,19 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('keydown', handleKeyPress);
 
     // update duration when audio is loaded
-    audio.addEventListener('loadedmetadata', function () {
+    audio.addEventListener('canplaythrough', function () {
         duration.innerText = formatTime(audio.duration);
+    });
+
+    audio.addEventListener('loadedmetadata', function () {
+        progressBar.value = 0;
     });
 
     window.onload = function () {
         const audio = document.getElementById("myAudio");
         const video = document.getElementById("videoClip");
         const progressBar = document.getElementById("progressBar");
-    
+
         // progress bar change
         progressBar.addEventListener("input", function () {
             const seekTime = (audio.duration / 100) * progressBar.value;
