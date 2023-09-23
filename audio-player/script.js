@@ -59,5 +59,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
+    // update duration when audio is loaded
+    audio.addEventListener('loadedmetadata', function () {
+        duration.innerText = formatTime(audio.duration);
+    });
+
+    window.onload = function () {
+        const audio = document.getElementById("myAudio");
+        const video = document.getElementById("videoClip");
+        const progressBar = document.getElementById("progressBar");
+    
+        // progress bar change
+        progressBar.addEventListener("input", function () {
+            const seekTime = (audio.duration / 100) * progressBar.value;
+            audio.currentTime = seekTime;
+            video.currentTime = seekTime;
+        });
+    
+        // update the video time as the audio plays
+        audio.addEventListener("timeupdate", function () {
+            video.currentTime = audio.currentTime;
+        });
+    };
+
 
 });
