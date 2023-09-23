@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.audio-player {
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #3333332a;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.song-details {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.song-details h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.song-details p {
+    font-size: 14px;
+    margin: 0;
+    color: #888;
+}
+
+.controls button {
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #0000006f;
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#progressBar {
+    width: 80%;
+    margin: 10px 0;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    font-size: 14px;
+    color: #888;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
