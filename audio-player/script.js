@@ -8,12 +8,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const progressBar = document.getElementById('progressBar');
     const currentTime = document.getElementById('currentTime');
     const duration = document.getElementById('duration');
+    const coverBox = document.querySelector(".cover-img");
+    const cover = document.getElementById('cover');
 
     let currentSong = 0;
     const songs = ["song1.mp3", "song2.mp3", "song3.mp3", "song4.mp3", "song5.mp3", "song6.mp3"];
     const videoClips = ["video1.mp4", "video2.mp4", "video3.mp4", "video4.mp4", "video5.mp4", "video6.mp4"];
     const titles = ["Unknown (To You)", "Dream On", "Who Can You Trust", "Enemy", "Better", "Venom"];
     const artists = ["Jacob Banks", "Blacktop Mojo", "Ivy Levan", "Imagine Dragons", "Plumb", "Eminem"];
+    const covers = ["cover1.jpg", "cover2.jpg", "cover3.png", "cover4.jpg", "cover5.jpg", "cover6.jpg"];
 
     // play/pause button
     playPauseBtn.addEventListener('click', function () {
@@ -44,12 +47,16 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateMedia() {
         audio.src = songs[currentSong];
         videoClip.src = videoClips[currentSong];
+        cover.src = covers[currentSong];
+
         audio.play();
         videoClip.play();
+    
         playPauseBtn.innerText = 'Pause';
         document.querySelector('.song-details h2').innerText = titles[currentSong];
         document.querySelector('.song-details p').innerText = artists[currentSong];
     }
+    
 
     // update current time and progress bar
     audio.addEventListener('timeupdate', function () {

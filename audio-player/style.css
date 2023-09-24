@@ -15,6 +15,26 @@ body {
     color: #fff;
     position: relative;
     overflow: hidden;
+    position: relative;
+}
+
+.cover-img {
+    box-sizing: border-box;
+    height: 102px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #909090;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#cover {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: black;
 }
 
 video {
@@ -32,6 +52,7 @@ video {
     height: fit-content;
     width: 25%;
     background-color: #00000095;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .song-info {
@@ -67,6 +88,7 @@ video {
     padding: 10px 0;
     margin: 0 10px;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .controls button:hover {
