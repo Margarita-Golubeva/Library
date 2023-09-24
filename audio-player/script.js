@@ -83,11 +83,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const video = document.getElementById("videoClip");
         const progressBar = document.getElementById("progressBar");
 
+        if (audio.paused) {
+            playPauseBtn.innerText = 'Play';
+        } else {
+            playPauseBtn.innerText = 'Pause';
+        }
+
         // progress bar change
         progressBar.addEventListener("input", function () {
             const seekTime = (audio.duration / 100) * progressBar.value;
             audio.currentTime = seekTime;
             video.currentTime = seekTime;
+            progressBarInteracted = true;
         });
     
         // update the video time as the audio plays
