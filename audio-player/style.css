@@ -2,10 +2,17 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #000;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .audio-player {
-    height: 92vh;
+    height: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,6 +123,7 @@ video {
 }
 
 footer {
+    height: 5%;
     padding: 10px;
     background-color: #272525;
     color: #fff;
@@ -141,10 +149,6 @@ footer a:hover {
 }
 
 @media screen and (max-width: 1200px) {
-
-    .audio-player {
-        height: 100vh;
-    }
 
     .controls {
         display: flex;
