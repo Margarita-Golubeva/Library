@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const progressBar = document.getElementById('progressBar');
     const currentTime = document.getElementById('currentTime');
     const duration = document.getElementById('duration');
-    const coverBox = document.querySelector(".cover-img");
     const cover = document.getElementById('cover');
 
     let currentSong = 0;
@@ -17,6 +16,86 @@ document.addEventListener('DOMContentLoaded', function () {
     const titles = ["Unknown (To You)", "Dream On", "Who Can You Trust", "Enemy", "Venom"];
     const artists = ["Jacob Banks", "Blacktop Mojo", "Ivy Levan", "Imagine Dragons", "Eminem"];
     const covers = ["cover1.jpg", "cover2.jpg", "cover3.png", "cover4.jpg", "cover5.jpg"];
+
+    const soundBtn = document.getElementById('sound-button-logo');
+    const shuffleLoopBtn = document.getElementById('shuffle-button-logo');
+
+    // sound, shuffle, and loop states
+
+    // sound button
+
+    let isSoundOn = true;
+
+    soundBtn.addEventListener('click', () => {
+        if (isSoundOn) {
+            audio.volume = 0;
+            soundBtn.src = 'mute.svg';
+        } else {
+            audio.volume = 1;
+            soundBtn.src = 'sound.svg';
+        }
+        isSoundOn = !isSoundOn;
+    });
+
+    // shuffle/loop button
+
+    let isShuffleOn = false;
+    let shuffledSongIndexes = [];
+    
+    shuffleLoopBtn.addEventListener('click', () => {
+        if (isShuffleOn) {
+            shuffleLoopBtn.src = 'loop.svg';
+            isShuffleOn = false;
+        } else {
+            shuffleLoopBtn.src = 'shuffle.svg';
+            isShuffleOn = true;
+    
+            // generate a shuffled array of song indexes
+            shuffledSongIndexes = [...Array(songs.length).keys()];
+            for (let i = shuffledSongIndexes.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffledSongIndexes[i], shuffledSongIndexes[j]] = [shuffledSongIndexes[j], shuffledSongIndexes[i]];
+            }
+        }
+    });
+    
+    // previous button
+    prevBtn.addEventListener('click', function () {
+        if (isShuffleOn) {
+            // use the shuffled array to get the next song
+            currentSong = shuffledSongIndexes.pop();
+            if (shuffledSongIndexes.length === 0) {
+                // if all songs have been played, reshuffle
+                shuffledSongIndexes = [...Array(songs.length).keys()];
+                for (let i = shuffledSongIndexes.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [shuffledSongIndexes[i], shuffledSongIndexes[j]] = [shuffledSongIndexes[j], shuffledSongIndexes[i]];
+                }
+            }
+        } else {
+            currentSong = (currentSong - 1 + songs.length) % songs.length;
+        }
+        updateMedia();
+    });
+    
+    // next button
+    nextBtn.addEventListener('click', function () {
+        if (isShuffleOn) {
+            // use the shuffled array to get the next song
+            currentSong = shuffledSongIndexes.pop();
+            if (shuffledSongIndexes.length === 0) {
+                // reshuffle
+                shuffledSongIndexes = [...Array(songs.length).keys()];
+                for (let i = shuffledSongIndexes.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [shuffledSongIndexes[i], shuffledSongIndexes[j]] = [shuffledSongIndexes[j], shuffledSongIndexes[i]];
+                }
+            }
+        } else {
+            currentSong = (currentSong + 1) % songs.length;
+        }
+        updateMedia();
+    });
 
     // play/pause button
     playPauseBtn.addEventListener('click', function () {
@@ -29,18 +108,6 @@ document.addEventListener('DOMContentLoaded', function () {
             videoClip.pause();
             playPauseBtn.innerText = 'Play';
         }
-    });
-
-    // previous button
-    prevBtn.addEventListener('click', function () {
-        currentSong = (currentSong - 1 + songs.length) % songs.length;
-        updateMedia();
-    });
-
-    // next button
-    nextBtn.addEventListener('click', function () {
-        currentSong = (currentSong + 1) % songs.length;
-        updateMedia();
     });
 
     // update media (audio and video)
@@ -57,7 +124,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.song-details p').innerText = artists[currentSong];
     }
     
-
     // update current time and progress bar
     audio.addEventListener('timeupdate', function () {
         currentTime.innerText = formatTime(audio.currentTime);
