@@ -55,6 +55,7 @@ video {
 
 .plate-wrapper {
     padding-top: 40px;
+    padding-bottom: 40px;
     height: fit-content;
     width: 25%;
     background-color: #00000095;
@@ -113,8 +114,19 @@ video {
     padding: 5px;
     margin: 0;
     position: absolute;
-    bottom: 1%;
     right: 10%;
+    bottom: 15%;
+    background-color: #00000095;
+}
+
+#shuffleLoopBtn {
+    width: fit-content;
+    height: 35px;
+    padding: 5px;
+    margin: 0;
+    position: absolute;
+    right: 30%;
+    bottom: 15%;
     background-color: #00000095;
 }
 
@@ -135,7 +147,7 @@ video {
     width: 80%;
     font-size: 14px;
     color: #909090;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 
 footer {
@@ -176,6 +188,14 @@ footer a:hover {
         width: 50%;
         font-size: 100%;
         margin: 5px;
+    }
+
+    .time {
+        padding-bottom: 60px;
+    }
+
+    #soundBtn, #shuffleLoopBtn {
+        bottom: 10%;
     }
 
 }
