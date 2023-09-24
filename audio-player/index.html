@@ -8,52 +8,54 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <div class="audio-player">
-        <div class="cover-img">
-            <img id="cover" src="cover1.jpg" alt="Cover" style="width:100px;height:100px;">
-        </div>
-        <div id="background-video">
-            <video id="videoClip" autoplay muted>
-                <source src="video1.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div id="audio-controls">
-            <audio id="myAudio">
-                <source src="song1.mp3" type="audio/mp3">
-            </audio>
-        </div>
-        <div class="plate-wrapper">
-            <div class="song-info">
-                <div class="song-details">
-                    <h2>Song Title 1</h2>
-                    <p>Artist Name 1</p>
+    <div class="container">
+        <div class="audio-player">
+            <div class="cover-img">
+                <img id="cover" src="cover1.jpg" alt="Cover" style="width:100px;height:100px;">
+            </div>
+            <div id="background-video">
+                <video id="videoClip" autoplay muted>
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div id="audio-controls">
+                <audio id="myAudio">
+                    <source src="song1.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div class="plate-wrapper">
+                <div class="song-info">
+                    <div class="song-details">
+                        <h2>Song Title 1</h2>
+                        <p>Artist Name 1</p>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button id="prevBtn">Previous</button>
+                    <button id="playPauseBtn">Play</button>
+                    <button id="nextBtn">Next</button>
+                </div>
+                <div class="progress">
+                    <input id="progressBar" type="range" min="0" max="100" step="0.1">
+                    <div class="time">
+                        <span id="currentTime">0:00</span> <span id="duration">0:00</span>
+                    </div>
                 </div>
             </div>
-            <div class="controls">
-                <button id="prevBtn">Previous</button>
-                <button id="playPauseBtn">Play</button>
-                <button id="nextBtn">Next</button>
-            </div>
-            <div class="progress">
-                <input id="progressBar" type="range" min="0" max="100" step="0.1">
-                <div class="time">
-                    <span id="currentTime">0:00</span> <span id="duration">0:00</span>
+        </div>
+        <footer>
+            <div class="footer-wrapper">
+                <div class="rolling-link">
+                    <a href="https://rs.school/js-stage0/" target=”_blank”><img src="rsschool.svg" alt="RS School Logo" style="width:125px"></a>
+                </div>
+                <div><p>2023</p>
+                </div>
+                <div class="github-link">
+                    <a href="https://github.com/Margarita-Golubeva" target=”_blank”>Margarita G.</a>
                 </div>
             </div>
-        </div>
+        </footer>
     </div>
-    <footer>
-        <div class="footer-wrapper">
-            <div class="rolling-link">
-                <a href="https://rs.school/js-stage0/" target=”_blank”><img src="rsschool.svg" alt="RS School Logo" style="width:125px"></a>
-            </div>
-            <div><p>2023</p>
-            </div>
-            <div class="github-link">
-                <a href="https://github.com/Margarita-Golubeva" target=”_blank”>Margarita G.</a>
-            </div>
-        </div>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
