@@ -18,6 +18,30 @@ document.addEventListener('DOMContentLoaded', function () {
     const artists = ["Jacob Banks", "Blacktop Mojo", "Ivy Levan", "Imagine Dragons", "Eminem"];
     const covers = ["cover1.jpg", "cover2.jpg", "cover3.png", "cover4.jpg", "cover5.jpg"];
 
+    const soundBtn = document.getElementById('sound-button-logo');
+    const shuffleLoopBtn = document.getElementById('shuffleLoopBtn');
+
+    // Initialize sound
+    let isSoundOn = true;
+
+
+    // Sound button click event
+    soundBtn.addEventListener('click', () => {
+        if (isSoundOn) {
+            audio.volume = 0;
+            soundBtn.src = 'mute.svg';
+        } else {
+            audio.volume = 1;
+            soundBtn.src = 'sound.svg';
+        }
+        isSoundOn = !isSoundOn;
+    });
+
+
+
+
+
+
     // play/pause button
     playPauseBtn.addEventListener('click', function () {
         if (audio.paused) {
