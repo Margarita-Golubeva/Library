@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
+
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
     const clearButton = document.getElementById('clearButton');
-    const main = document.querySelector('main');
+
 
     // fetch and display images from API
     function fetchImages(query) {
