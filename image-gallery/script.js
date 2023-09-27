@@ -63,6 +63,17 @@ document.addEventListener('DOMContentLoaded', function () {
         fetchAndDisplayImages(apiUrl);
     });
 
+    // Enter key press - no focus
+    searchInput.addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            const query = searchInput.value;
+            if (query.trim() !== '') {
+                fetchAndDisplayImages(updateApiUrl());
+                searchInput.blur(); // Remove focus from the input
+            }
+        }
+    });
+
     // clear the search input
     clearButton.addEventListener('click', function () {
         searchInput.value = '';
