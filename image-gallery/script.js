@@ -24,7 +24,27 @@ document.addEventListener('DOMContentLoaded', function () {
         return `https://api.unsplash.com/search/photos?query=${query}&per_page=${perPage}&tag_mode=${tagMode}&client_id=${apiKey}`;
     }
 
-    // fetch images from the Unsplash and update the gallery
+    function addDownloadLink(imgElement, imageUrl) {
+        // download link
+        const downloadLink = document.createElement('a');
+        downloadLink.href = imageUrl;
+        downloadLink.target = '_blank';
+        downloadLink.classList.add('download-link');
+    
+        // download icon
+        const downloadIcon = document.createElement('img');
+        downloadIcon.src = 'download.svg';
+        downloadIcon.alt = 'Download';
+        downloadIcon.style.width = '30px';
+    
+        // download icon to download link
+        downloadLink.appendChild(downloadIcon);
+    
+        // download link to image container
+        imgElement.parentNode.appendChild(downloadLink);
+    }
+
+    // fetch images from Unsplash and update gallery
     function fetchAndDisplayImages(apiUrl) {
         gallery.innerHTML = '';
 
@@ -37,17 +57,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 images.forEach((image) => {
                     const imgElement = document.createElement('img');
-
+                
                     imgElement.src = image.urls.small;
                     imgElement.alt = image.description || '';
                     imgElement.title = image.description || '';
-
+                
                     const galleryItem = document.createElement('div');
                     galleryItem.classList.add('gallery-item');
-
-                    const figure = document.createElement('figure');
-                    figure.appendChild(imgElement);
-                    galleryItem.appendChild(figure);
+                
+                    // container for image and download link
+                    const imageContainer = document.createElement('div');
+                    imageContainer.classList.add('image-container');
+                    galleryItem.appendChild(imageContainer);
+                
+                    // imgElement to image container
+                    imageContainer.appendChild(imgElement);
+                
+                    // download link to image
+                    addDownloadLink(imgElement, image.urls.full);
+                
+                    // galleryItem to gallery
                     gallery.appendChild(galleryItem);
                 });
             })
@@ -94,16 +123,26 @@ document.addEventListener('DOMContentLoaded', function () {
                 
                 randomImages.forEach((image) => {
                     const imgElement = document.createElement('img');
+                
                     imgElement.src = image.urls.small;
                     imgElement.alt = image.description || '';
                     imgElement.title = image.description || '';
-                    
+                
                     const galleryItem = document.createElement('div');
                     galleryItem.classList.add('gallery-item');
-                    
-                    const figure = document.createElement('figure');
-                    figure.appendChild(imgElement);
-                    galleryItem.appendChild(figure);
+                
+                    // container for image and download link
+                    const imageContainer = document.createElement('div');
+                    imageContainer.classList.add('image-container');
+                    galleryItem.appendChild(imageContainer);
+                
+                    // imgElement to image container
+                    imageContainer.appendChild(imgElement);
+                
+                    // download link to image
+                    addDownloadLink(imgElement, image.urls.full);
+                
+                    // galleryItem to gallery
                     gallery.appendChild(galleryItem);
                 });
             })
