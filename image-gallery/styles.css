@@ -109,6 +109,7 @@ main {
 .gallery-item {
     break-inside: avoid;
     margin-bottom: 10px;
+    position: relative;
 }
   
 .gallery-item img {
@@ -119,17 +120,28 @@ main {
 .gallery-item:hover img {
     transform: scale(1.05);
     transition: 0.5s;
-    cursor: pointer;
-}
-
-.gallery-item figure {
-    margin: 0;
-    position: relative;
 }
 
 .gallery-item img {
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.download-link {
+    position: absolute;
+    padding: 10px;
+    bottom: 0;
+    right: 0;
+    box-shadow: none;
+}
+
+.download-link:hover {
+    cursor: pointer;
+    filter: invert(100%);
+}
+
+.download-link img {
+    box-shadow: none;
 }
 
 /* FOOTER */
